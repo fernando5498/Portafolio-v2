@@ -1,0 +1,28 @@
+@use "../1-base/variables" as var;
+/* -------------------- CUSTOM-VIDEO-Player -------------------- */
+:root {
+    --plyr-color-main: #08907a;
+}
+
+.container-video-player {
+    max-width: 776px;
+    max-height: 519px;
+    margin: 80px auto;
+    border-radius: 10px;
+    position: relative;
+    padding: 0;
+    border: 10px solid var.$color_primary;
+    background: var.$color_primary;
+    .plyr--video {
+        border-radius: 10px;
+        .plyr__controls {
+            background: transparent;
+        }
+        .plyr__poster {
+            background-size: cover;
+        }
+        &.plyr--menu-open {
+            overflow: hidden;
+        }
+    }
+}

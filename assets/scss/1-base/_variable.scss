@@ -1,0 +1,12 @@
+$color-primario: white;
+$color-secundario: black;
+$color-terciario: #0a0a0a;
+$color-cuternario: #666666;
+
+/* --------------------- TRANSITION --------------------- */
+
+$transition: (
+    slow: all 900ms ease-in-out,
+    medium: all 600ms ease-in-out,
+    fast: all 300ms ease-in-out,
+);

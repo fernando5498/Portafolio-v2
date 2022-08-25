@@ -1,0 +1,19 @@
+@use "../1-base/variable" as var;
+
+@mixin btn-base {
+    padding: 0.48rem clamp(1rem, 0.5rem + 1vw, 2.1rem);
+    width: fit-content;
+    border-radius: 0.3125rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: map-get(var.$transition, fast);
+    gap: 0.625rem;
+    img,
+    svg,
+    i {
+        font-size: 1.125rem;
+        width: 1.125rem;
+    }
+}

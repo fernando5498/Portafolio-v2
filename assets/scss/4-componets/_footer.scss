@@ -1,0 +1,31 @@
+@use "../1-base/variable" as var;
+.footer {
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer-col {
+    h3 {
+        font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
+        font-weight: bold;
+    }
+}
+.footer-col__conten {
+    li:nth-child(1) {
+        margin-top: 42px;
+    }
+    li {
+        margin-bottom: 30px;
+        font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
+    }
+}
+.footer-copyright {
+    padding: 1rem 0px;
+    text-align: center;
+    font-weight: 400;
+    color: var.$color-cuternario;
+}
+.footer-copyright {
+    font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
+}

@@ -1,0 +1,149 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/base-buttons" as btn;
+@use "../3-helpers/helpers" as help;
+/* ------------------------ FORM-BTN ------------------------ */
+
+.btn-form {
+    @include btn.btn-personalizado(var.$color-primary, 5px 0px 5px, 19px);
+    color: var.$color_white;
+    font-weight: 500;
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 2px;
+    &:hover {
+        background: var.$color_primary-dark;
+    }
+}
+
+/* ---------------------- REGISTER ---------------------- */
+
+.register-form {
+    margin: 0 auto;
+    max-width: 480px;
+    background: var.$color_white;
+    box-shadow: var.$box-shadow-secundario;
+    border-radius: 20px;
+    padding: 55px 10px 85px 10px;
+    font-size: 14px;
+    .container-register {
+        width: 90%;
+        max-width: 365px;
+        margin: 0 auto;
+    }
+    &__header {
+        text-align: center;
+        position: relative;
+        h2 {
+            font-size: 31px;
+        }
+        img {
+            width: 120px;
+            position: absolute;
+            bottom: 100%;
+            transform: translateX(-50%) rotate(15deg);
+        }
+    }
+    &__footer {
+        text-align: center;
+        p {
+            font-size: 19px;
+            font-weight: 500;
+        }
+    }
+}
+
+.input-contenedor {
+    border: 1px solid var.$color_gray;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    span {
+        width: 40%;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .icon-container {
+        width: 15%;
+        min-width: 50px;
+        @include help.f-center;
+        svg {
+            border-radius: 50%;
+            background: var.$color-primary;
+            color: var.$color_white;
+            padding: 2.5px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .lock-icon {
+            background: transparent;
+            color: var.$color-primary;
+            font-size: 15px;
+            padding: 0;
+        }
+    }
+    input {
+        padding: 18px 10px;
+        border-left: 1px solid var.$color_gray;
+        width: 100%;
+    }
+}
+
+/* ------------------------ LOGIN ----------------------- */
+
+.register-form--login {
+    input[type="checkbox"] {
+        display: none;
+        & + label[for="remember"]:before {
+            content: "\f00c";
+            display: inline-block;
+            left: 0;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var.$color-primary;
+            border-radius: 2px;
+            vertical-align: bottom;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var.$color_white;
+            text-align: center;
+            margin-right: 5px;
+        }
+        &:checked + label[for="remember"]:before {
+            background: var.$color-primary;
+        }
+    }
+    label[for="remember"] {
+        svg {
+            display: none;
+        }
+    }
+    .btn-form {
+        width: 100%;
+        padding: 10px 10px;
+    }
+}
+
+.link-acount {
+    color: #0071bb;
+    font-weight: 700;
+    font-size: 14px;
+    &:hover {
+        color: #28abe1;
+    }
+}
+
+.account-redes {
+    a {
+        flex-basis: 220px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .register-form__header img {
+        width: 90px;
+    }
+}
