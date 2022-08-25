@@ -1,0 +1,6 @@
+@use "../2-mixins/break-points" as breakP;
+.container {
+    @include breakP.media-queries-up(lg) {
+        max-width: 1243px;
+    }
+}

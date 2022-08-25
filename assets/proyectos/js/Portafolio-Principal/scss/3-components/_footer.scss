@@ -1,0 +1,205 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/mixins" as mixs;
+@use "../2-mixins/breakPoints" as breakP;
+
+.contact {
+    padding: var.$padding-conteiner;
+    background: var.$bg-color;
+    min-height: 100vh;
+}
+
+.contact-title {
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    position: relative;
+    .contact-redes {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        li {
+            a {
+                padding: 2rem;
+                transition: all 300ms;
+                min-height: 250px;
+                min-width: 250px;
+                @include mixs.f-center;
+                flex-direction: column;
+                @include mixs.sombras-normal;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                    "Open Sans", "Helvetica Neue", sans-serif;
+            }
+            a:hover p {
+                color: var.$color-primario;
+            }
+            a:active {
+                box-shadow: none;
+                color: var.$color-secundario;
+            }
+        }
+    }
+}
+
+.icon-redes {
+    width: 80px;
+    margin: 10px;
+}
+
+.info {
+    color: var.$color-secundario;
+    @include mixs.f-center;
+    flex-direction: column;
+}
+
+.info-icon {
+    opacity: 0.7;
+    transition: all 300ms;
+    margin-top: 10px;
+    padding: 0px 20px 20px 0px;
+    width: 100%;
+    height: 60px;
+    @include mixs.f-center;
+    &:hover {
+        opacity: 1;
+    }
+    span {
+        i {
+            position: relative;
+            font-size: 1.5rem;
+            padding: 0px 5px 0px 5px;
+            border-radius: 4px;
+            transition: all 300ms;
+        }
+        i:hover {
+            color: var.$color-secundario;
+            color: var.$color-primario;
+        }
+    }
+}
+
+@keyframes saltar-icon {
+    0% {
+        top: 0;
+        font-size: 1.5rem;
+    }
+    50% {
+        top: -20px;
+        font-size: 2rem;
+    }
+    100% {
+        top: 0;
+        font-size: 1.5rem;
+    }
+}
+
+.container-form {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: -120%;
+    left: 0;
+    background: transparent;
+    @include mixs.f-center;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+}
+
+.container-form.active {
+    bottom: 0;
+    z-index: 100;
+}
+
+.form {
+    background: var.$bg-color2;
+    width: 80%;
+    min-height: 280px;
+    position: relative;
+    @include mixs.sombras-normal;
+    border-radius: 4px;
+    height: 70%;
+    margin: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    .cerrar-overlay {
+        width: 15px;
+        height: 15px;
+    }
+    &__img {
+        padding: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px 0px 0px 4px;
+            -webkit-border-radius: 4px 0px 0px 4px;
+            -moz-border-radius: 4px 0px 0px 4px;
+            -ms-border-radius: 4px 0px 0px 4px;
+            -o-border-radius: 4px 0px 0px 4px;
+        }
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        overflow: scroll;
+        input,
+        textarea {
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid transparentize(var.$color-secundario, 0.7);
+            height: 40px;
+            font-weight: medium;
+            color: transparentize(var.$color-secundario, 0.5);
+            transition: all 300ms;
+            -webkit-transition: all 300ms;
+            -moz-transition: all 300ms;
+            -ms-transition: all 300ms;
+            -o-transition: all 300ms;
+        }
+        textarea {
+            width: 100%;
+            min-height: 80px;
+        }
+        input:focus,
+        textarea:focus {
+            border-bottom: 1px solid var.$color-secundario;
+            outline: none;
+            color: var.$color-secundario;
+        }
+        input[type="submit"] {
+            @include mixs.btn-principal;
+            height: auto;
+            &:hover {
+                background: var.$color-primario;
+                border: 2px solid var.$color-primario;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    @include breakP.mediaQueriesMax(sm) {
+        height: 100%;
+        width: 100%;
+        &__data {
+            width: 100%;
+        }
+        &__img {
+            display: none;
+        }
+    }
+}
+
+.footer {
+    color: var.$color-secundario;
+    background: var.$bg-color;
+    text-align: center;
+    padding-top: 10px;
+    @include mixs.f-center;
+}

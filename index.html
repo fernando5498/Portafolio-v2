@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raul Pineda</title>
+    <!-- swipper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- wow  -->
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                boxClass: 'wow',      // default
+                animateClass: 'animated', // default
+                offset: 100,          // default
+                mobile: true,       // default
+                live: true        // default
+            }
+        )
+        wow.init();
+    </script>
+    <!-- animate  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- my css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BDMMMX2VV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6BDMMMX2VV');
+    </script>
+
+    <!-- Hotjar Tracking Code for https://raulfetch.herokuapp.com/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 3009285,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body class="body">
+    <header id="header" class="header animate__animated animate__fadeInDown">
+        <div class="container">
+            <div class="logo">
+                <h1>RAUL PINEDA</h1>
+            </div>
+            <div id="menu-burger" class="menu-burger">
+                <span>Menú</span>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div id="bg-fill-menu" class="bg-fill-menu"></div>
+    <div id="wrapper-menu-movile" class="wrapper-menu-movile">
+        <div class=" d-flex justify-content-between">
+            <div class="theme-dark" id="theme-dark"><i class="fa-solid fa-lightbulb-slash"></i></div>
+            <div class="close" id="close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="user">
+            <img src='assets/img/home/CV.png' alt='Raul Pineda' loading='lazy'>
+        </div>
+        <a class="btn-primario my-4" href="assets/proyectos/RaulPineda-Curriculum.pdf" target="_blank"
+            rel="noopener noreferrer">Curriculum</a>
+
+        <div class="redes my-4">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100010575304377" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a target="_blank"
+                href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a target="_blank" href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+
+        <nav class="nav-r">
+            <ul class="navbar-r">
+                <li class="navbar-r__link">
+                    <a href="#home">Inicio</a>
+                </li>
+                <li class="navbar-r__link">
+                    <a href="#about">Sobre Mí</a>
+                </li>
+                <li class="navbar-r__link">
+                    <a href="#skills">Habilidades</a>
+                </li>
+                <li class="navbar-r__link">
+                    <a href="#experience">Experiencia</a>
+                </li>
+                <li class="navbar-r__link">
+                    <a href="#proyect">Proyectos</a>
+                </li>
+                <li class="navbar-r__link">
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main">
+        <section class=" home mb-section " id="home">
+            <div class="home-content container align-self-center">
+                <h1 class="visibility-animate wow animate__animated animate__fadeInUp home-title">
+                    Desarrollador Web Front End</h1>
+                <p data-wow-delay="0.3s" class="visibility-animate wow animate__animated animate__fadeInUp home-text">
+                    Apoyo o Servicio
+                    Freelancer</p>
+                <a data-wow-delay="0.5s"
+                    class="visibility-animate wow animate__animated animate__fadeInUp btn-primario my-3" href="#about"
+                    rel="noopener noreferrer">Sobre Mí</a>
+            </div>
+
+            <div
+                class=" visibility-animate wow animate__animated animate__fadeInUp  wrapper-redes-home container align-self-end">
+                <div class="redes redes--1">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100010575304377"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="home-copyright">Copyright © 2022 - Ecuador Imbabura - Todos los Derechos Reservado</p>
+            </div>
+
+        </section>
+
+        <section id="about" class="about mb-section">
+            <div class="container d-flex flex-wrap flex-lg-nowrap">
+                <div data-wow-duration="1.2s"
+                    class=" about-img mx-auto visibility-animate wow animate__animated animate__fadeInLeft">
+                    <img class="" src='assets/img/home/sobre-mi.png' alt='Raul Pineda' loading='lazy'>
+                </div>
+                <div class="sub-heading sub-heading--about ">
+                    <div class="sub-heading__description">
+                        <h2 data-wow-duration="1.2s"
+                            class="visibility-animate wow animate__animated animate__fadeInRight">Un poco sobre mí</h2>
+                        <p data-wow-duration="1.2s" class="visibility-animate wow animate__animated animate__fadeInUp">
+                            Hola
+                            soy Raúl Pineda y me
+                            estoy formando como desarrollador web, vivo actualmente en Ecuador
+                            y me gusta aprender cosas nuevas, busco mejorar cada vez más mis habilidades más no me
+                            limito a aprender nuevas. Me apasiona la Música así como la Tecnología y busco oportunidades
+                            donde pueda aprender de mis compañeros o pueda mejorar mis propias habilidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------- SKILLS ------------------ -->
+        <section id="skills" class="skills mb-section" data-wow-duration="2s">
+            <div class="container">
+                <div class="sub-heading flex-wrap flex-lg-nowrap">
+                    <div class="col-12 col-lg-6 sub-heading__description">
+                        <h2 data-wow-duration="1.2s"
+                            class="visibility-animate wow animate__animated animate__fadeInLeft">Habilidades</h2>
+                        <p data-wow-duration="1.2s" class="visibility-animate wow animate__animated animate__fadeInUp">
+                            Tengo buen manejo y uso de
+                            las siguientes tecnologias para la creacion de mis paginas webs y
+                            plantillas para correos electronicos.
+                        </p>
+                    </div>
+                    <div data-wow-duration="1.2s"
+                        class="col-12 col-lg-6 sub-heading__icons visibility-animate wow animate__animated animate__fadeInUp">
+                        <i data-tippy-content="Html" class="tooltip-ra fa-brands fa-html5"></i>
+                        <i data-tippy-content="Css" class="tooltip-ra fa-brands fa-css3-alt"></i>
+                        <i data-tippy-content="Sass" class="tooltip-ra fa-brands fa-sass"></i>
+                        <i data-tippy-content="Figma" class="tooltip-ra fa-brands fa-figma"></i>
+                        <i data-tippy-content="Bootstrap" class="tooltip-ra fa-brands fa-bootstrap"></i>
+                        <i data-tippy-content="JavaScript" class="tooltip-ra fa-brands fa-square-js"></i>
+                        <i data-tippy-content="WordPress" class="tooltip-ra fa-brands fa-wordpress"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------ CURSOS ------------------ -->
+        <section id="courses" class=" overflow-hidden courses mb-section">
+            <div id="slider-sub-heading" class=" container d-flex">
+                <div class="col-12 sub-heading sub-heading-item flex-lg-row-reverse flex-wrap flex-lg-nowrap">
+                    <div class="col-12 col-lg-6 sub-heading__description">
+                        <h2 data-wow-duration="1.2s"
+                            class="visibility-animate wow animate__animated animate__fadeInRight">Cursos</h2>
+                        <p data-wow-duration="1.2s" class="visibility-animate wow animate__animated animate__fadeInUp">
+                            En es está seccion podran
+                            ver los cursos que he tomado para mejorar mis habilidades como
+                            desarrollador y algunos pequeños curso de mi interes.
+                        </p>
+                        <button data-wow-duration="2s" id="btn-next"
+                            class="btn-links visibility-animate wow animate__animated animate__fadeInUp">Ver resumen
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div data-wow-duration="1.2s"
+                        class="col-12 col-lg-6 sub-heading__icons visibility-animate wow animate__animated animate__fadeInUp">
+                        <img data-tippy-content="Instituto Simón Bolivar" class="tooltip-ra"
+                            src='assets/img/icons/icpsb-icon.png' alt='Simon Bolivar' loading='lazy'>
+                        <img data-tippy-content="7even" class="tooltip-ra" src='assets/img/icons/7even-icon.png'
+                            alt='7even' loading='lazy'>
+                        <img data-tippy-content="Udemy" class="tooltip-ra" src='assets/img/icons/udemy-icon.svg'
+                            alt='Udemy' loading='lazy'>
+                    </div>
+                </div>
+
+                <div class="col-12 sub-heading sub-heading-item flex-lg-row-reverse flex-wrap flex-lg-nowrap">
+
+                    <div class="col-12  sub-heading__icons">
+
+                        <a href="assets/proyectos/certificados/Certificado_Electronica_Basica.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/icpsb-icon.png' alt='Simon Bolivar'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Electronica Básica</h3>
+                            <p class="card-curso__time"><time datetime="1/12/2018">Diciembre 2018</time></p>
+                        </a>
+
+                        <a href="assets/proyectos/certificados/Certificado_Reparacion_Pc.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/icpsb-icon.png' alt='Simon Bolivar'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Reparación de Computadoras</h3>
+                            <p class="card-curso__time"><time datetime="1/03/2019">Marzo 2019</time></p>
+                        </a>
+
+
+                        <a href="assets/proyectos/certificados/Certificado-Udemy-Master-en-Css.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Css Responsive y Bootstrap</h3>
+                            <p class="card-curso__time"><time datetime="1/8/2021">Agosto 2021</time></p>
+                        </a>
+
+                        <a href="assets/proyectos/certificados/Certificado-Udemy-HTML.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">HTML de Cero a Experto</h3>
+                            <p class="card-curso__time"><time datetime="1/12/2021">Diciembre 2021</time></p>
+                        </a>
+
+                        <a href="assets/proyectos/certificados/Universidad-de-Css-desde-cero-a-experto.pdf"
+                            target="_blank" rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Css de Cero a Experto</h3>
+                            <p class="card-curso__time"><time datetime="1/12/2021">Diciembre 2021</time></p>
+                        </a>
+
+                        <a href="assets/proyectos/certificados/Certificado_sass.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Sass y JQuery</h3>
+                            <p class="card-curso__time"><time datetime="1/1/2022">Enero 2022</time></p>
+                        </a>
+
+                        <a href="assets/proyectos/certificados/Certificado_Raul-7even.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/7even-icon.png' alt='7even'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Desarrollo Web con 7even</h3>
+                            <p class="card-curso__time"><time datetime="1/6/2022">Junio 2022</time></p>
+                        </a>
+
+                        <a href="assets/proyectos/certificados/curso-wordpress.pdf" target="_blank"
+                            rel="noopener noreferrer" class="card-curso">
+                            <img class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
+                                loading='lazy'>
+                            <h3 class="card-curso__title">Manejo de WordPress</h3>
+                            <p class="card-curso__time"><time datetime="1/6/2022">Junio 2022</time></p>
+                        </a>
+                        <button id="btn-prev" class="btn-links"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- --------------- EXPERIENCIA --------------- -->
+        <section class="experience mb-section" id="experience">
+            <div class="container">
+
+                <div class="experience-content">
+                    <h3 class="pb-3">Experiencia y Prácticas</h3>
+                    <!-- ------ ITEMS-EXPERIENCE ------- -->
+                    <div class="item-experience mt-5 visibility-animate wow animate__animated animate__fadeInUp">
+                        <!-- ---------- LABEL ---------- -->
+                        <div class="item-experience__header">
+                            <div class="item-experience__header__time">
+                                <h4>2022</h4>
+                                <p><time datetime="1/6/2022">Junio</time> - <time datetime="1/7/2022">Julio</time></p>
+                            </div>
+                            <h4 class="item-experience__header__title">Aprendiendo con NKI (Trabajo en equipo)</h4>
+                            <i class="item-experience__header__icon fa-solid fa-arrow-down"></i>
+                        </div>
+                        <!-- --------- CONTENT --------- -->
+                        <div class="item-experience__content">
+                            <p>
+                                Apoyo en la creacion de un sitio
+                                web con compañeros de estudio para finalizar un curso gratuito “Aprendiendo con NKI”,
+                                la pagina fue creada con HTML,CSS y JavaScript, todo fue hecho sin ningun framework y en
+                                base de un diseño que creamos en figma.
+                                Al ser un trabajo coperativo tuvimos que manejar el proyecto con git para el control de
+                                versiones
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item-experience mt-5 visibility-animate wow animate__animated animate__fadeInUp">
+                        <!-- ---------- LABEL ---------- -->
+                        <div class="item-experience__header">
+                            <div class="item-experience__header__time">
+                                <h4>2022</h4>
+                                <p><time datetime="1/2/2022">Febrero</time> - <time datetime="1/3/2022">Marzo</time></p>
+                            </div>
+                            <h4 class="item-experience__header__title">Trabajo en Maquetación Web</h4>
+                            <i class="item-experience__header__icon fa-solid fa-arrow-down"></i>
+                        </div>
+                        <!-- --------- CONTENT --------- -->
+                        <div class="item-experience__content">
+                            <p>
+                                Trabaje en la maquetación web de
+                                una pagina que tiene su propio
+                                token (EVU), realice las secciones
+                                conforme a los diseños dados por
+                                ellos, todo el trabajo fue de
+                                manera Freelancer por el lapso de
+                                un mes
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item-experience mt-5 visibility-animate wow animate__animated animate__fadeInUp">
+                        <!-- ---------- LABEL ---------- -->
+                        <div class="item-experience__header">
+                            <div class="item-experience__header__time">
+                                <h4>2022 - 2021</h4>
+                                <p><time datetime="22/5/2021">Mayo</time> - <time datetime="4/8/2022">Agosto</time></p>
+                            </div>
+                            <h4 class="item-experience__header__title">Apoyo Voluntario Como Secretario</h4>
+                            <i class="item-experience__header__icon fa-solid fa-arrow-down"></i>
+                        </div>
+                        <!-- --------- CONTENT --------- -->
+                        <div class="item-experience__content">
+                            <p>
+                                Apoyo voluntario como secretario
+                                de la Iglesia de Jesucristo de los
+                                Santos de los Ultimos dias. Hacia seguimiento, revision y organización de registros
+                                tantos fisicos como digitales,
+                                realizaba las agendas para reuniones junto al control de su calendario de
+                                actividades, parte de todo era registrar, participar y apoyar en las actividades que se
+                                realizaban tanto recreativas como para ayuda humanitaria.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------- PROYECTS --------------------- -->
+        <section class="proyect mb-section" id="proyect">
+            <h2>Proyectos</h2>
+            <div class=" proyects-preview ">
+                <div class="container-video ">
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="proyects-preview-container container flex-wrap flex-lg-nowrap">
+                    <!-- info del proyecto  -->
+                    <div
+                        class="proyect-content col-12  col-lg-8 visibility-animate wow animate__animated animate__fadeInLeft">
+                        <h3 class="proyect-content__title">Wallpapers</h3>
+                        <span class="proyect-content__time"><time datetime="7/12/2021">7/diciembre/2021</time></span>
+                        <p class="proyect-content__description">
+                            Creada con Html,Css y JavaScript, me inspire con diferentes diseños e implemente videos en
+                            bucle de alta calidad.
+                        </p>
+
+                        <div class="d-flex gap-4">
+                            <a id="btn-site" class="mx-0 btn-primario btn-primario--icon" href="#" target="_blank"
+                                rel="noopener noreferrer">Ver
+                                Sitio<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a id="btn-github" class="mx-0 btn-primario btn-primario--icon" href="#" target="_blank"
+                                rel="noopener noreferrer">Github<i class="fa-brands fa-github"></i></a>
+                            <button id="btn-play" class=" d-none mx-0 btn-primario btn-primario--icon" href="#"
+                                target="_blank" rel="noopener noreferrer">Play<i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <!-- galeria de proyectos  -->
+                    <div class="swiper mySwiper visibility-animate wow animate__animated animate__fadeInRight">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-etiqueta="html,css,js" data-etiqueta="css" data-etiqueta="js"
+                                data-title="Wallpapers" data-time="7/diciembre/2021"
+                                data-description="Creada con Html,Css y JavaScript, me inspire con diferentes diseños e implemente videos en bucle de alta calidad."
+                                data-site="assets/proyectos/js/Pagina-Wallpaper/index.html"
+                                data-github="https://github.com/fernando5498/Pagina-Wallpaper">
+                                <img class="proyect-slider__item" src='assets/img/home/flor.webp' alt='Wallpapers'
+                                    loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-etiqueta="html,css,js" data-title="Landing Page Eventos"
+                                data-time="11/Enero/2022"
+                                data-description="Es uno de los proyectos finales que tuve que realizar para el curso de Sass y jquery o bueno fue el que mas me gusto."
+                                data-site="assets/proyectos/js/Pagina-Eventos/index.php"
+                                data-github="https://github.com/fernando5498/Pagina-Eventos">
+                                <img class="proyect-slider__item" src='assets/img/home/pagina-eventos.webp' alt='Events'
+                                    loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-etiqueta="html,css,sass,bootstrap,js"
+                                data-title="Evulus Tokens" data-time="19/Febrero/2022"
+                                data-description="Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript. Pueden visitar su sitio en https://evulus.com/"
+                                data-site="assets/proyectos/js/Evulus/index.html"
+                                data-github="https://github.com/fernando5498/evulus-Inicio">
+                                <img class="proyect-slider__item" src='assets/img/home/evulus-home.webp' alt='Evuslus'
+                                    loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-etiqueta="html,css"
+                                data-title="Portafolio Estilo Landing Page" data-time="22/agosto/2021"
+                                data-description="Lo cree con el fin de que fuera mi portafolio personal pero fue una buena practica donde aprendi mas de JavaScript"
+                                data-site="assets/proyectos/html,css,sass/landing-basico/index.html"
+                                data-github="https://github.com/fernando5498/Portafolio-Basico">
+                                <img class="proyect-slider__item" src='assets/img/home/portafolio-basico.jpg'
+                                    alt='Portafolio' loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-video="HcxUKjzbFhQ" data-etiqueta="premiere,after"
+                                data-title="Two Feet I Feel Like I'm Drowning" data-time="3/Enero/2022"
+                                data-description="Siempre me ha gustado la musica y me encantaria seguir creando videos asi por mi cuenta, lo cree con after effects">
+                                <img src='assets/img/home/two_feet-poster.webp' alt='video' loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-etiqueta="html,css,js" data-title="Creacion de Paginas Webs"
+                                data-time="13/Marzo/2021"
+                                data-description="Creada con puro codigo Html,Css y pequeñas interacciones con JavaScript creadas por mi"
+                                data-site="assets/proyectos/js/Landing-Page-pagina-2/index.html"
+                                data-github="https://github.com/fernando5498/Landing-Page-pagina-2">
+                                <img class="proyect-slider__item"
+                                    src='assets/proyectos/js/Landing-Page-pagina-2/Landing-Page-pagina-2.webp'
+                                    alt='Paginas Webs' loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-video="yh-xzSoGBNA" data-etiqueta="premiere,after"
+                                data-title="Video para RedesTopk" data-time="19/octubre/2021"
+                                data-description="Video Creado con Illustrator, After effects y Premiere y montado por Redestopk en su canal Oficial de Youtube, si gustan visiten su canal con el boton de abajo">
+                                <img src='assets/img/home/redestopk1.webp' alt='video' loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-etiqueta="html,css" data-title="Landing Page"
+                                data-time="13/octubre/2021"
+                                data-description="Es una pagina estatica donde utilize Html y Css para la maquetación y es responsiva para diferentes tamaños"
+                                data-site="assets/proyectos/html,css,sass/Landing-page-Mejorando/index.html"
+                                data-github="https://github.com/fernando5498/Landing-page-Mejorando">
+                                <img class="proyect-slider__item"
+                                    src='assets/proyectos/html,css,sass/Landing-page-Mejorando/Landing-page-Mejorando.webp'
+                                    alt='langin Page' loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-video="W8mErtIAuwE" data-etiqueta="premiere,after"
+                                data-title="RedesTopk Marketing" data-time="1/octubre/2021"
+                                data-description="Tuve la oportunidad de crearles un video a RedesTopk, les invito a visitar su canal es una empresa dedicada al Marketing">
+                                <img src='assets/img/home/redestopk.webp' alt='video' loading='lazy'>
+                            </div>
+
+                            <div class="swiper-slide" data-etiqueta="html,css,sass,bootstrap,js"
+                                data-title="Mi Antiguo Portafolio" data-time="24/Julio/2022"
+                                data-description="Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript. Pueden visitar su sitio en https://evulus.com/"
+                                data-site="assets/proyectos/js/Portafolio-Principal/index.html"
+                                data-github="https://github.com/fernando5498/Segundo-Portafolio">
+                                <img class="proyect-slider__item"
+                                    src='assets/proyectos/js/Portafolio-Principal/primer-portafolio.webp'
+                                    alt='Portafolio de Raul Pineda' loading='lazy'>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="technologies-icons d-none d-sm-flex">
+                    <img src='assets/img/icons/html.svg' alt='Html' loading='lazy'>
+                    <img src='assets/img/icons/css-icon.svg' alt='Css' loading='lazy'>
+                    <img src='assets/img/icons/js-icon.svg' alt='JavaScript' loading='lazy'>
+                </div>
+            </div>
+            </div>
+            <button id="btn-volver" class=" btn-volver mx-0 btn-primario btn-primario--icon" href="#" target="_blank"
+                rel="noopener noreferrer">Volver<i class="fa-solid fa-left"></i></button>
+        </section>
+
+
+        <!-- ------------------ OTROS ------------------ -->
+        <section id="others" class="mb-5 pb-5 others mb-section">
+            <div class="container">
+                <div class="sub-heading flex-wrap flex-lg-nowrap">
+                    <div class="col-12 col-lg-6 sub-heading__description">
+                        <h2 data-wow-duration="1.2s"
+                            class="visibility-animate wow animate__animated animate__fadeInLeft">Otros</h2>
+                        <p data-wow-duration="1.2s" class="visibility-animate wow animate__animated animate__fadeInUp">
+                            Estas son las programas
+                            que uso en mi entorno de trabajo, progreso personal y uso
+                            situacional, pero no necesariamente tengo un alto nivel en estas herramientas.
+                        </p>
+                    </div>
+
+                    <div data-wow-duration="1.2s"
+                        class="col-12 col-lg-6 sub-heading__icons visibility-animate wow animate__animated animate__fadeInUp">
+                        <img data-tippy-content="Visual Studio Code" class="tooltip-ra"
+                            src='assets/img/icons/visualCode-icon.svg' alt='Visual Studio Code' loading='lazy'>
+                        <img data-tippy-content="Notion" class="tooltip-ra" src='assets/img/icons/notion-icon.svg'
+                            alt='Notion' loading='lazy'>
+                        <img data-tippy-content="Github" class="tooltip-ra" src='assets/img/icons/github-icon.svg'
+                            alt='Github' loading='lazy'>
+                        <img data-tippy-content="Obs Studio" class="tooltip-ra" src='assets/img/icons/obs-icon.svg'
+                            alt='Obs' loading='lazy'>
+                        <img data-tippy-content="ClickUp" class="tooltip-ra" src='assets/img/icons/clickup-icon.svg'
+                            alt='ClickUp' loading='lazy'>
+                        <img data-tippy-content="Illustrator" class="tooltip-ra"
+                            src='assets/img/icons/illustrator-icon.svg' alt='Illustrator' loading='lazy'>
+                        <img data-tippy-content="Premiere" class="tooltip-ra" src='assets/img/icons/premiere-icon.svg'
+                            alt='Premiere' loading='lazy'>
+                        <img data-tippy-content="After Effects" class="tooltip-ra"
+                            src='assets/img/icons/afterEffects-icon.svg' alt='After Effects' loading='lazy'>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer data-wow-duration="1.2s"
+        class="footer mt-5 pt-5 visibility-animate wow animate__animated animate__fadeInUp">
+        <div class="container gap-4 d-flex flex-wrap align-content-center justify-content-between">
+            <div id="contact" class="footer-col col-5 col-sm-6 col-lg-3">
+                <h2>Raul Pineda</h2>
+                <ul class="footer-col__conten">
+                    <li>
+                        <a href="https://goo.gl/maps/TquTHiPc3r6cdUr89" target="_blank" rel="noopener noreferrer">San
+                            Roque
+                            - Imbabura</a>
+                    </li>
+                    <li>
+                        <span>Contactate:</span>
+                        <a href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
+                            target="_blank" rel="noopener noreferrer">+593 97 979 4244</a>
+                    </li>
+                    <li>
+                        <div class="redes mx-0 redes--1">
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100010575304377"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col col-5 col-sm-5 col-lg-2">
+                <h3>Navegación</h3>
+                <ul class="footer-col__conten">
+                    <li>
+                        <a href="#home" rel="noopener noreferrer">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" rel="noopener noreferrer">
+                            Sobre Mí
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" rel="noopener noreferrer">
+                            Habilidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience" rel="noopener noreferrer">
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#proyect" rel="noopener noreferrer">
+                            Proyecto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col col-5 col-sm-6 col-lg-3">
+                <img width="100%" src="assets/img/home/bg-home.png" alt="">
+            </div>
+
+            <div class="footer-col col-5 col-sm-5 col-lg-2">
+                <h3>Creado con</h3>
+                <ul class="footer-col__conten">
+                    <li>
+                        Html
+                    </li>
+                    <li>
+                        Css/Sass
+                    </li>
+                    <li>
+                        Bootstrap
+                    </li>
+                    <li>
+                        JavaScript
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer-copyright">Diseñado por Raul Pineda Copyright © 2022. Todos los Derechos Reservado
+        </p>
+    </footer>
+
+
+    <!-- tooltip -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <!-- swiper -->
+    <script>
+        tippy('.tooltip-ra', {
+
+            content: 'My tooltip!',
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- personal  -->
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/proyects.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,241 @@
+/* ------------------------ HOME ------------------------ */
+@use "../1-base/variables" as var;
+@use "../2-mixins/breakPoints" as breakP;
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    &__title {
+        text-align: start;
+        color: var.$color-secundario;
+        h2 {
+            font-weight: 200;
+        }
+    }
+    &__img {
+        max-width: 350px;
+
+        img {
+            filter: invert(1);
+        }
+    }
+    @include breakP.mediaQueriesMax(lg) {
+        padding-bottom: 90px;
+        &__img {
+            min-width: 210px;
+        }
+    }
+    @include breakP.mediaQueriesMax(sm) {
+        &__title {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &__img {
+            display: none;
+        }
+    }
+}
+
+/* --------------------------- ABOUT-US --------------------------- */
+
+.about-us {
+    position: relative;
+    width: 100%;
+    background: var.$bg-color;
+    padding: 5rem 0;
+    &__content {
+        font-size: var.$text-normal;
+        margin-top: 1rem;
+        &__img {
+            max-width: 300px;
+            float: left;
+            margin-right: 30px;
+            img {
+                width: 100%;
+            }
+        }
+        &__button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .icon {
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                img {
+                    filter: invert(100%);
+                    align-self: center;
+                    height: 100%;
+                }
+                .tooltip-personal {
+                    background: white;
+                    color: black;
+                    padding: 5px 20px;
+                    border-radius: 4px;
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                    font-weight: bolder;
+                    top: -7px;
+                    transform: translateY(-100%);
+                    -webkit-transform: translateY(-100%);
+                    -moz-transform: translateY(-100%);
+                    -ms-transform: translateY(-100%);
+                    -o-transform: translateY(-100%);
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                    opacity: 0;
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        background: inherit;
+                        bottom: -4px;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(45deg);
+                        -webkit-transform: translateX(-50%) rotate(45deg);
+                        -moz-transform: translateX(-50%) rotate(45deg);
+                        -ms-transform: translateX(-50%) rotate(45deg);
+                        -o-transform: translateX(-50%) rotate(45deg);
+                    }
+                }
+                &:hover .tooltip-personal {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @include breakP.mediaQueriesMax(sm) {
+        .about-us__content__img {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            width: 150px;
+            clear: both;
+            float: none;
+        }
+    }
+}
+
+/* ----------------------------- STUDY ---------------------------- */
+
+.study {
+    padding: var.$padding-conteiner;
+    overflow: hidden;
+}
+
+/* ----------------------- SKILLS ----------------------- */
+
+.skills {
+    padding: var.$padding-conteiner;
+    overflow: hidden;
+}
+
+/* -------------------------- PORTAFOLIO -------------------------- */
+
+.works {
+    background: var.$bg-color2;
+    padding: var.$padding-conteiner;
+    overflow: hidden;
+    min-height: 1200px;
+}
+
+.works-title {
+    color: var.$color-secundario;
+    .works-category {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                padding: 2px 10px;
+                border: 2px solid var.$color-secundario;
+                margin: 5px 5px;
+                transition: all 300ms;
+                cursor: pointer;
+            }
+            li:hover {
+                background: var.$color-primario;
+            }
+        }
+    }
+}
+
+.active-filter {
+    background: var.$color-primario;
+}
+
+.img-cargadas {
+    opacity: 1 !important;
+}
+
+.grid {
+    position: relative;
+    opacity: 1;
+    .item {
+        position: absolute;
+        display: block;
+        width: calc(25% - 20px);
+        margin: 10px;
+        .item-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                -o-object-position: center;
+                object-position: center;
+                transition: all 300ms;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+            video {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                -o-object-position: center;
+                object-position: center;
+                transition: all 300ms;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    @include breakP.mediaQueriesMax(lg) {
+        .item {
+            width: calc(50% - 20px);
+        }
+    }
+    @include breakP.mediaQueriesMax(sm) {
+        .item {
+            width: calc(100% - 20px);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use "../1-base/variable" as var;
+@use "../2-mixins/base-button" as btn;
+
+.btn-primario {
+    @include btn.btn-base;
+    color: var.$color-primario;
+    border-bottom: 1px solid var.$color-primario;
+    margin-inline: auto;
+    font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
+    font-weight: bold;
+    &:hover {
+        background: var.$color-primario;
+        color: var.$color-secundario;
+    }
+}
+.btn-primario--icon {
+    background: var.$color-primario;
+    color: var.$color-secundario;
+}
+.btn-links {
+    background: none;
+    color: var.$color-primario;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+    .fa-solid {
+        font-size: 1.125rem;
+    }
+    i {
+        font-size: 1.125rem;
+    }
+}

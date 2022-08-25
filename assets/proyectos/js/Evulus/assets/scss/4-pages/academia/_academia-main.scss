@@ -1,0 +1,454 @@
+@use "../../1-base/variables" as var;
+@use "../../2-mixins/breakpoints" as breakP;
+/* ---------------------- ACADEMIA ---------------------- */
+
+.academia-body {
+    .go-top.active {
+        background: var.$color_white;
+        color: var.$color_primary;
+    }
+}
+
+.evulus-academia {
+    min-height: 100vh;
+    position: relative;
+    &__content {
+        h1,
+        h2 {
+            font-size: clamp(2.1875rem, 0.5rem + 1vw, 3.0525rem);
+        }
+        h2 {
+            font-weight: 800;
+        }
+        p {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 40px 0px;
+        }
+        .btn-evulus-medium {
+            margin-top: 70px;
+            font-weight: 800;
+        }
+        @include breakP.media-queries-down(lg) {
+            .btn-evulus-medium {
+                margin: 50px auto;
+            }
+        }
+        @include breakP.media-queries-down(xm) {
+            h1,
+            h2 {
+                word-break: break-all;
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+            }
+            .btn-evulus-medium {
+                width: 100%;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.container-animation-bot {
+    position: relative;
+    max-height: 560px;
+    width: 100%;
+    margin-bottom: 20px;
+    &__bot {
+        max-height: 560px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__1 {
+        max-width: 95px;
+        top: 45%;
+        position: absolute;
+        left: 0;
+        animation: evulus-anime 10000ms ease-in-out infinite normal forwards;
+    }
+    &__2 {
+        max-width: 95px;
+        top: 80%;
+        position: absolute;
+        animation: ethereum-anime 10000ms ease-in-out infinite normal forwards 1s;
+    }
+    &__3 {
+        max-width: 95px;
+        right: 0;
+        bottom: 20%;
+        position: absolute;
+        animation: bitcoin-anime 10000ms ease-in-out infinite normal forwards 2s;
+    }
+    @include breakP.media-queries-down(sm) {
+        &__1 {
+            max-width: 60px;
+        }
+        &__2 {
+            max-width: 60px;
+        }
+        &__3 {
+            max-width: 60px;
+        }
+    }
+}
+
+@keyframes evulus-anime {
+    0% {
+        left: 0%;
+        transform: translateY(0px);
+    }
+    50% {
+        left: 78%;
+        transform: translateY(100%);
+    }
+    100% {
+        z-index: -1;
+        left: 0%;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ethereum-anime {
+    0% {
+        left: 0%;
+        z-index: -1;
+    }
+    50% {
+        left: 80%;
+        top: 10%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes bitcoin-anime {
+    0% {
+        bottom: 20%;
+        z-index: -1;
+    }
+    50% {
+        right: 80%;
+        bottom: 80%;
+    }
+    100% {
+        bottom: 20%;
+    }
+}
+
+/* --------------------- METODOLOGIA -------------------- */
+
+.academia-metodologia {
+    background: url(../img/mapabg-green.svg) no-repeat;
+    background-size: 143%;
+    background-position: 47% 50%;
+    margin: 30px auto;
+    h2 {
+        font-size: 51.52px;
+        color: var.$color_primary;
+        font-weight: 700;
+        margin: 45px 0px;
+        margin-left: 55px;
+    }
+    @include breakP.media-queries-down(lg) {
+        h2 {
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+    @include breakP.media-queries-down(sm) {
+        .metodologia-video .title-reproductor .circle-play {
+            width: 60px;
+            height: 60px;
+            &::after {
+                border-bottom: 10px solid transparent;
+                border-top: 10px solid transparent;
+                border-left: 15px solid var.$color_white;
+            }
+        }
+    }
+    @include breakP.media-queries-down(xm) {
+        h2 {
+            font-size: 40px;
+        }
+        .metodologia-video .title-reproductor {
+            font-size: 20px;
+        }
+    }
+}
+
+.metodologia-item-container {
+    gap: 40px;
+    justify-content: center;
+    .metodologia-item {
+        background: #f1f1f1;
+        border-radius: 15px;
+        padding: 18px 12px;
+        transition: map-get(var.$transition, fast);
+        color: var.$color_primary;
+        height: 90px;
+        flex-basis: 277px;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+        font-size: 21.48px;
+        box-shadow: var.$box-shadow-primario;
+        &:hover,
+        &.active {
+            background: var.$color_primary;
+            color: var.$color_white;
+            img {
+                filter: brightness(0) invert(100%);
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            width: 20%;
+            height: 100%;
+            transition: map-get(var.$transition, fast);
+            margin-right: 5px;
+        }
+        span {
+            text-align: center;
+        }
+        &:nth-child(1n) {
+            font-size: 21px;
+        }
+        &:nth-child(2n) {
+            font-size: 21px;
+        }
+        &:nth-child(3n) {
+            font-size: 16px;
+        }
+        &:nth-child(4n) {
+            font-size: 16px;
+        }
+    }
+}
+
+/* ---------------------- APRENDER ---------------------- */
+
+.academia-aprende {
+    padding-top: 62px;
+    &__content {
+        margin-top: 30px;
+        h2 {
+            color: var.$color_primary;
+            font-size: 51.51px;
+            font-weight: 700;
+            margin-left: 30px;
+            margin-bottom: 34px;
+        }
+        p {
+            font-size: 20px;
+        }
+        @include breakP.media-queries-down(md) {
+            h2 {
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.academia-aprende-img {
+    display: block;
+    max-width: 375px;
+    margin: 0 auto;
+    max-height: 618px;
+    position: relative;
+    width: 70%;
+    &__persona {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    &__item-1 {
+        max-width: 167px;
+        position: absolute;
+        top: 10%;
+        left: -15%;
+    }
+    &__item-2 {
+        max-width: 177px;
+        position: absolute;
+        top: 20%;
+        right: -22%;
+    }
+    &__item-3 {
+        max-width: 178px;
+        position: absolute;
+        bottom: -5%;
+        left: -18%;
+    }
+    &__item-4 {
+        max-width: 178px;
+        position: absolute;
+        bottom: 5%;
+        right: -22%;
+    }
+    @include breakP.media-queries-down(sm) {
+        &__item-1 {
+            max-width: 100px;
+        }
+        &__item-2 {
+            max-width: 100px;
+        }
+        &__item-3 {
+            max-width: 100px;
+        }
+        &__item-4 {
+            max-width: 100px;
+        }
+    }
+}
+
+/* ----------------------- DESAFIO ---------------------- */
+
+.academia-desafio {
+    background: url(../img/academia/linea-bg.svg) no-repeat;
+    padding-bottom: 60px;
+    h2 {
+        font-size: 41.53px;
+        color: var.$color_primary;
+        font-weight: 700;
+    }
+    @include breakP.media-queries-down(xl) {
+        background-size: 100% 40%;
+        background-repeat: repeat;
+    }
+}
+
+.academia-desafios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: repeat(14, 63px);
+    .academia-desafio-title {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+    .academia-desafios-item:nth-child(2) {
+        grid-row: 7;
+        grid-column: 1;
+    }
+    .academia-desafios-item:nth-child(3) {
+        grid-row: 5;
+        grid-column: 2;
+    }
+    .academia-desafios-item:nth-child(4) {
+        grid-row: 7;
+        grid-column: 3;
+    }
+    .academia-desafios-item:nth-child(5) {
+        grid-row: 3;
+        grid-column: 4;
+    }
+    @include breakP.media-queries-down(xl) {
+        .academia-desafios-item:nth-child(5) {
+            grid-row: 15;
+            grid-column: 1;
+        }
+    }
+    @include breakP.media-queries-down(lg) {
+        .academia-desafios-item:nth-child(4) {
+            grid-row: 13;
+            grid-column: 2;
+        }
+    }
+    @include breakP.media-queries-down(sm) {
+        grid-template-rows: repeat(4, auto);
+        .academia-desafios-item:nth-child(2),
+        .academia-desafios-item:nth-child(3),
+        .academia-desafios-item:nth-child(5),
+        .academia-desafios-item:nth-child(4) {
+            grid-column: 1;
+        }
+        .academia-desafios-item:nth-child(2) {
+            grid-row: 3;
+        }
+    }
+}
+
+/* ---------------------- NOTICIAS ---------------------- */
+
+.academia-noticias {
+    padding: 45px 0px 50px 0px;
+    @include breakP.media-queries-down(md) {
+        .owl-carousel {
+            width: auto;
+        }
+    }
+}
+
+/* ----------------------- CONTACT ---------------------- */
+
+.contact--home {
+    background: url(../img/bg-end.png) top var.$color_primary;
+    padding: 80px 0px;
+    color: var.$color_white;
+    text-align: center;
+    position: relative;
+    .contact__content {
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-size: calc(25px + 1vw);
+            margin: 0;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: calc(35px + 1vw);
+            font-weight: 600;
+        }
+    }
+}
+
+/* --------------------- SUSCRIBETE --------------------- */
+
+.academia-suscripcion {
+    padding: 80px 0px 65px 0px;
+    text-align: center;
+    h2 {
+        color: var.$color_primary;
+        font-weight: 700;
+        font-size: 51.51px;
+    }
+    p {
+        font-size: 15.46px;
+    }
+}
+
+.academia-suscripcion-correo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+    .env-correo {
+        height: 88px;
+        width: 50%;
+        background: #e5e5e5;
+        border: 3px solid var.$color_white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px var.$color-grey-claro;
+        font-size: 25px;
+        padding: 0px 20px;
+        min-width: 300px;
+    }
+    .btn-env {
+        background: var.$color_primary;
+        border-radius: 5px;
+        padding: 0px 45px;
+        height: 69px;
+        color: var.$color_white;
+        font-size: 27.22px;
+    }
+}

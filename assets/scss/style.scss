@@ -1,0 +1,20 @@
+/* ------------------------ BASE ------------------------ */
+@forward "1-base/reset";
+@forward "1-base/fonts";
+
+/* ----------------------- HELPERS ---------------------- */
+@forward "3-helpers/class";
+@forward "3-helpers/containers";
+
+/* --------------------- COMPONENTES -------------------- */
+@forward "4-componets/header";
+@forward "4-componets/buttons";
+@forward "4-componets/redes";
+@forward "4-componets/sub-heading";
+@forward "4-componets/card-curse";
+@forward "4-componets/proyects-slider";
+@forward "4-componets/items-experience.scss";
+@forward "4-componets/footer";
+
+/* ---------------------- SECTIONS ---------------------- */
+@forward "5-sections/home";

@@ -1,0 +1,37 @@
+@use "../1-base/variable" as var;
+@use "../2-mixins/break-points" as breakP;
+
+.home {
+    height: clamp(670px, 100vh, 900px);
+    background: url(../img/home/bg-home.png) no-repeat var.$color-secundario bottom;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    color: var.$color-primario;
+    grid-template-rows: 80% 20%;
+    text-align: center;
+}
+.home-title {
+    font-size: clamp(2rem, 1.5rem + 5.2vw, 5.375rem);
+    font-weight: bold;
+}
+.home-text {
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+    font-weight: 400;
+}
+.home-copyright {
+    font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
+    font-weight: 400;
+    color: var.$color-cuternario;
+}
+
+/* ------------------------ ABOUT ----------------------- */
+.about-img {
+    img {
+        @include breakP.media-queries-down(md) {
+            width: 100%;
+        }
+    }
+}
+
+/* --------------------- EXPERIENCE --------------------- */
