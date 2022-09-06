@@ -33,5 +33,8 @@ Este es mi nuevo portafolio, lo cree porque ya era necesario hacer un cambio, ad
 
 Todo lo diseñe en Figma y me apoye un poco en Photoshop e Illustrator para algunos objetos e imagenes, espero que les guste, talvez alla algunos cambios en el sitio a lo largo del tiempo más trate de que el sitio sea lo mas parecido posible al diseño.
 
-![App Screenshot]()
+<img src="https://github.com/fernando5498/Raul-Pineda-Site/blob/master/assets/readme/macbook.png" height="250"></img>
+<img src="https://github.com/fernando5498/Raul-Pineda-Site/blob/master/assets/readme/ipad.png" height="250"></img>
+<img src="https://github.com/fernando5498/Raul-Pineda-Site/blob/master/assets/readme/mobile.png" height="250"></img>
+<img src="https://github.com/fernando5498/Raul-Pineda-Site/blob/master/assets/readme/Landing%20Page.png" ></img>
 
