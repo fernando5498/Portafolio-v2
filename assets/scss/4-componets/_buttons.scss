@@ -4,15 +4,24 @@
 .btn-primario {
     @include btn.btn-base;
     color: var.$color-primario;
-    border-bottom: 1px solid var.$color-primario;
     margin-inline: auto;
     font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
     font-weight: bold;
+    transition: cubic-bezier(0.65, 0.05, 0.36, 1) 600ms;
+    background-image: linear-gradient(var.$color-primario, var.$color-primario);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
     &:hover {
-        background: var.$color-primario;
+        background-size: 100% 100%;
+        color: var.$color-secundario;
+    }
+    &.active {
+        background-size: 100% 100%;
         color: var.$color-secundario;
     }
 }
+
 .btn-primario--icon {
     background: var.$color-primario;
     color: var.$color-secundario;

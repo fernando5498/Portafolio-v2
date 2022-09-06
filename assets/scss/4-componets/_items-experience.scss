@@ -26,6 +26,8 @@
         grid-template-columns: auto;
     }
     &__time {
+        pointer-events: none;
+
         h4 {
             font-size: clamp(1.2rem, 0.5rem + 1vw, 2.25rem);
             font-weight: bold;
@@ -38,10 +40,14 @@
         }
     }
     &__title {
+        pointer-events: none;
+
         font-size: clamp(1rem, 0.5rem + 1vw, 1.9375rem);
         font-weight: bold;
     }
     &__icon {
+        pointer-events: none;
+
         font-size: 1.2rem;
         transition: map-get(var.$transition, medium);
         width: fit-content;
@@ -59,6 +65,6 @@
     transition: map-get(var.$transition, medium);
 }
 .item-experience__content.active {
-    height: clamp(100px, 450px - 40vw, 500px);
+    height: clamp(100px, 450px - 42vw, 500px);
     max-height: fit-content;
 }

@@ -113,9 +113,11 @@ function bgPreviewContent() {
 
 }
 
+
 document.querySelector('.swiper').addEventListener('mouseout', bgPreviewContent)
 document.querySelector('.proyects-preview-container').addEventListener('mouseout', bgPreviewContent)
 document.querySelector('.swiper').addEventListener('touchstart', bgPreviewContent)
+document.querySelector('.swiper').addEventListener('touchend', bgPreviewContent)
 document.querySelector('.proyects-preview-container').addEventListener('touchstart', bgPreviewContent)
 
 btnPlay.addEventListener('click', () => {
@@ -127,6 +129,7 @@ btnPlay.addEventListener('click', () => {
     document.querySelector('.container-video').style.pointerEvents = "auto"
     setTimeout(() => {
         btnVolver.style.left = "0"
+        btnVolver.style.animation = "hoverVolver 5s 1"
     }, 2000);
 
 })
