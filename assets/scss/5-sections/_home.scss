@@ -3,7 +3,7 @@
 
 .home {
     height: clamp(670px, 100vh, 900px);
-    background: url(../img/home/bg-home.png) no-repeat var.$color-secundario bottom;
+    background: url(../img/home/bg-home.webp) no-repeat var.$color-secundario bottom;
     background-size: cover;
     display: grid;
     justify-content: center;
@@ -28,6 +28,7 @@
 /* ------------------------ ABOUT ----------------------- */
 .about-img {
     img {
+        max-width: 519px;
         @include breakP.media-queries-down(md) {
             width: 100%;
         }

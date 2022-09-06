@@ -1,12 +1,13 @@
 /* ------------------------ BASE ------------------------ */
 @forward "1-base/reset";
-@forward "1-base/fonts";
 
 /* ----------------------- HELPERS ---------------------- */
 @forward "3-helpers/class";
 @forward "3-helpers/containers";
 
 /* --------------------- COMPONENTES -------------------- */
+
+@forward "4-componets/preload";
 @forward "4-componets/header";
 @forward "4-componets/buttons";
 @forward "4-componets/redes";

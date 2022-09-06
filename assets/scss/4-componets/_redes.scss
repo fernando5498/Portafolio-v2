@@ -1,3 +1,4 @@
+@use "../1-base/variable" as var;
 .redes {
     display: flex;
     width: min(60%, 315px);
@@ -5,9 +6,21 @@
     margin-inline: auto;
     flex-wrap: wrap;
     justify-content: space-between;
+
     a {
-        color: white;
+        transition: map-get(var.$transition, fast);
+        color: var.$color-primario;
+        background-image: linear-gradient(var.$color-primario, var.$color-primario);
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
         font-size: clamp(2rem, 0.5rem + 1vw, 3rem);
+        background-size: 0% 1px;
+        &:hover {
+            background-size: 100% 1px;
+        }
+        &.active {
+            background-size: 100% 1px;
+        }
     }
 }
 .redes--1 {
