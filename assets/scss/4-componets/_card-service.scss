@@ -1,0 +1,30 @@
+@use "../1-base/variable" as var;
+@use "../2-mixins/break-points" as breakP;
+.card-service {
+    background: var.$color-terciario;
+    padding: 2rem;
+    height: fit-content;
+    border-radius: 5px;
+    position: relative;
+    transition: map-get(var.$transition, medium);
+    text-align: center;
+    height: 100%;
+    margin-top: 1rem;
+}
+.card-service__icon {
+    font-size: 4.6rem;
+    font-weight: 800;
+}
+.card-service__title {
+    font-size: clamp(1rem, 0.5rem + 2vw, 1.6rem);
+}
+.card-service__description {
+    color: #747474;
+}
+
+.title {
+    font-size: clamp(2rem, 1.2rem + 3.5vw, 4rem);
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+}

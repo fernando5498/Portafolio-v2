@@ -9,7 +9,6 @@
     align-items: center;
     border-radius: 5px;
     position: relative;
-    max-width: 1220px;
     left: 0;
     transition: map-get(var.$transition, medium);
     h2 {
@@ -23,7 +22,7 @@
         }
     }
     p {
-        font-size: clamp(1rem, 0.5rem + 2vw, 1.6875rem);
+        font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
         font-weight: 400;
         margin-bottom: 10px;
         @include breakP.media-queries-down(sm) {
