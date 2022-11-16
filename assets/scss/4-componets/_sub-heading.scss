@@ -9,13 +9,12 @@
     align-items: center;
     border-radius: 5px;
     position: relative;
-    max-width: 1220px;
     left: 0;
     transition: map-get(var.$transition, medium);
     h2 {
         font-size: clamp(2rem, 1.2rem + 3.5vw, 4rem);
         font-weight: bold;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         @include breakP.media-queries-down(sm) {
             & {
                 text-align: center;
@@ -23,7 +22,7 @@
         }
     }
     p {
-        font-size: clamp(1rem, 0.5rem + 2vw, 1.6875rem);
+        font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
         font-weight: 400;
         margin-bottom: 10px;
         @include breakP.media-queries-down(sm) {
@@ -70,4 +69,7 @@
             padding: clamp(40px, 1.6rem + 3.7vw, 74px) clamp(30px, 1.1rem + 3.7vw, 60px);
         }
     }
+}
+.sub-heading__icons--high {
+    grid-template-columns: repeat(auto-fit, minmax(74px, 120px));
 }
