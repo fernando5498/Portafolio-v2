@@ -13,17 +13,6 @@ let proyectList = [
     },
     {
         type: "website",
-        title: "Landing Page Eventos",
-        time: "11/Enero/2022",
-        content:
-            "Es una de mis primeras practicas con php, el proyecto fue basado en un curso más pude me exforce en hacer mi propia versión.",
-        url: "assets/proyectos/js/Pagina-Eventos/index.php",
-        github: "https://github.com/fernando5498/Pagina-Eventos",
-        image: "assets/img/home/pagina-eventos.webp",
-        tags: ["html", "css", "js", "php"]
-    },
-    {
-        type: "website",
         title: "Evulus Tokens",
         time: "19/Febrero/2022",
         content:
