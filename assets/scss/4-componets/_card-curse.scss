@@ -2,6 +2,9 @@
 .card-curso {
     max-width: 120px;
     margin: 0 auto;
+    padding: 0.8rem 0.5rem;
+    border-radius: 5px;
+    transition: map-get(var.$transition, medium);
     &__img {
         height: 74px;
     }

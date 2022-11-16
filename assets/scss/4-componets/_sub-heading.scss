@@ -14,7 +14,7 @@
     h2 {
         font-size: clamp(2rem, 1.2rem + 3.5vw, 4rem);
         font-weight: bold;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         @include breakP.media-queries-down(sm) {
             & {
                 text-align: center;
@@ -69,4 +69,7 @@
             padding: clamp(40px, 1.6rem + 3.7vw, 74px) clamp(30px, 1.1rem + 3.7vw, 60px);
         }
     }
+}
+.sub-heading__icons--high {
+    grid-template-columns: repeat(auto-fit, minmax(74px, 120px));
 }
