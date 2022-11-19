@@ -260,3 +260,6 @@ var swiper = new Swiper(".mySwiper", {
         slideShadows: false,
     },
 })
+swiper.on('slideChange', function () {
+    bgPreviewContent()
+});
