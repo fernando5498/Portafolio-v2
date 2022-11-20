@@ -74,6 +74,41 @@ button:focus {
   outline-style: none;
 }
 
+a::selection,
+p::selection,
+span::selection,
+img::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+div::selection,
+time::selection,
+button::selection,
+li::selection {
+  background: rgba(196, 196, 196, 0.253);
+}
+
+/* Firefox */
+a::-moz-selection,
+p::-moz-selection,
+span::-moz-selection,
+img::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+div::selection,
+time::selection,
+button::selection,
+li::selection {
+  background: rgba(196, 196, 196, 0.253);
+}
+
 .mb-section {
   padding-top: clamp(87px, 50px + 7vw, 140px);
 }
@@ -134,7 +169,7 @@ button:focus {
   align-items: baseline;
 }
 .header.active {
-  background: #0b0b0b;
+  background: #0e0e0e;
   padding: 1.5rem 0px;
   box-shadow: 0px 0px 30px 0px #070707;
 }
@@ -145,7 +180,7 @@ button:focus {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(11, 11, 11, 0);
+  background: rgba(14, 14, 14, 0);
   z-index: 1;
   display: none;
 }
@@ -196,7 +231,7 @@ button:focus {
   width: 400px;
   padding: 2.3rem 3.4375rem;
   position: fixed;
-  background: #0b0b0b;
+  background: #0e0e0e;
   right: -150%;
   top: 0;
   z-index: 3;
@@ -335,7 +370,7 @@ button:focus {
 .sub-heading {
   display: flex;
   padding: clamp(40px, 1.6rem + 3.7vw, 74px) clamp(30px, 1.1rem + 3.7vw, 60px);
-  background: #0b0b0b;
+  background: #0e0e0e;
   gap: 2.5rem;
   height: fit-content;
   align-items: center;
@@ -653,7 +688,7 @@ button:focus {
 }
 
 .experience-content {
-  background: #0b0b0b;
+  background: #0e0e0e;
   border-radius: 5px;
   padding: 107px 85px 85px;
 }
@@ -723,7 +758,7 @@ button:focus {
 }
 
 .card-service {
-  background: #0b0b0b;
+  background: #0e0e0e;
   padding: 2rem;
   height: fit-content;
   border-radius: 5px;

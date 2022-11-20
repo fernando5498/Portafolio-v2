@@ -70,3 +70,38 @@ button:focus {
     box-shadow: none;
     outline-style: none;
 }
+
+a::selection,
+p::selection,
+span::selection,
+img::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+div::selection,
+time::selection,
+button::selection,
+li::selection {
+    background: rgba(196, 196, 196, 0.253);
+}
+
+/* Firefox */
+a::-moz-selection,
+p::-moz-selection,
+span::-moz-selection,
+img::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+div::selection,
+time::selection,
+button::selection,
+li::selection {
+    background: rgba(196, 196, 196, 0.253);
+}
