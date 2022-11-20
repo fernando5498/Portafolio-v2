@@ -71,7 +71,7 @@ let proyectList = [
         title: "Video para RedesTopk",
         time: "19-octubre-2021",
         content:
-            "Video Creado con Illustrator, After effects, Premiere y montado por Redestopk en su canal Oficial de Youtube, si gustan visiten su canal con el boton de abajo.",
+            `Video Creado con Illustrator, After effects, Premiere y montado por Redestopk en su canal Oficial de Youtube, si gustan visiten su canal de youtube o sitio web <a class="link" href="https://www.redestopk.com/" target="_blank">redestopk.com</a>`,
         url: "https://www.youtube.com/embed/yh-xzSoGBNA",
         image: "assets/img/home/redestopk1.webp",
         tags: ["premiere", "after-effects"]
@@ -186,7 +186,6 @@ function bgPreviewContent() {
             // iconos 
             let technologiesIcons = document.querySelector(".technologies-icons")
             listIcons(infoProyects.tags, technologiesIcons)
-
         }
     })
 }
@@ -198,27 +197,9 @@ function Proyects() {
         imageProyect.classList.add('swiper-slide')
         imageProyect.innerHTML = `<img class="proyect-slider__item" data-id="${proyect.title}" src='${proyect.image}' alt='${proyect.title}' loading='lazy'>`
         document.getElementById("container-swiper").appendChild(imageProyect)
-
-        // llena la descripcion y enlaces
-        imageProyect.addEventListener('click', bgPreviewContent)
-        document.querySelector(".swiper").addEventListener("mouseout", bgPreviewContent)
-        document.querySelector(".proyects-preview-container").addEventListener("mouseout", bgPreviewContent)
-        document.querySelector(".swiper").addEventListener("touchstart", bgPreviewContent)
-        document.querySelector(".swiper").addEventListener("touchend", bgPreviewContent)
-        document.querySelector(".proyects-preview-container").addEventListener("touchstart", bgPreviewContent)
-
     })
 }
 Proyects()
-
-// Verifica si hay contenido en la seccion de proyectos sino para añadirlo 
-let info = document.querySelector('.proyect-content__title')
-if (info.textContent === "") {
-    document.querySelector('.proyect-content__title').innerHTML = proyectList[0].title
-    document.querySelector('.proyect-content__time').innerHTML = proyectList[0].time
-    document.querySelector('.proyect-content__description').innerHTML = proyectList[0].content
-    document.querySelector(".proyects-preview").style.backgroundImage = "url(" + proyectList[0].image + ")"
-}
 
 // botones y animacion para los videos 
 
@@ -266,8 +247,6 @@ var swiper = new Swiper(".mySwiper", {
     direction: "vertical",
     keyboard: true,
     loop: true,
-    longSwipes: false,
-    longSwipesMs: 600,
     speed: 300,
     slideToClickedSlide: true,
     spaceBetween: 230,
@@ -275,8 +254,11 @@ var swiper = new Swiper(".mySwiper", {
         200: {
             direction: "horizontal",
         },
-
-        992: {},
+        992: {
+            autoplay: {
+                delay: 100,
+            },
+        },
     },
 
     coverflowEffect: {
@@ -287,7 +269,7 @@ var swiper = new Swiper(".mySwiper", {
         slideShadows: false,
     },
 })
-swiper.on('slideChange', function () {
+swiper.on('beforeTransitionStart', function () {
     bgPreviewContent()
 });
 /* ----------------------- TOLLTIP ---------------------- */
@@ -295,3 +277,4 @@ swiper.on('slideChange', function () {
 tippy('.tooltip-ra', {
     content: 'My tooltip!',
 });
+

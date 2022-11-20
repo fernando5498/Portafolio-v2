@@ -479,7 +479,6 @@ li::selection {
 
 .proyects-preview {
   position: relative;
-  background-image: url(../img/home/flor.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
