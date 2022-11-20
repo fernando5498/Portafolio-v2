@@ -262,6 +262,26 @@ function listIcons(array, father) {
     father.innerHTML = string.replace(/,/g, "")
 }
 
+
+/* ------------------------ BTNS ----------------------- */
+let btnPlay = document.getElementById("btn-play")
+let btnVolver = document.getElementById("btn-volver")
+
+btnPlay.addEventListener("click", () => {
+    document.querySelector(".proyect-content").style.left = "-150%"
+    document.querySelector(".swiper").style.right = "-150%"
+    document.querySelector(".technologies-icons").style.bottom = "-10%"
+    document.querySelector(".proyects-preview").classList.add("video-preview")
+    document.querySelector(".container-video").style.opacity = "1"
+    document.querySelector(".container-video").style.pointerEvents = "auto"
+    setTimeout(() => {
+        btnVolver.style.left = "0"
+        btnVolver.style.animation = "hoverVolver 5s 1"
+    }, 1500)
+})
+
+
+
 function bgPreviewContent() {
     proyectList.forEach(infoProyects => {
         let item = document.querySelector(".swiper-slide-active")
@@ -291,6 +311,18 @@ function bgPreviewContent() {
                         document.querySelector(".iframe-vid").innerHTML = iframeVid
                     }
 
+                    btnVolver.addEventListener("click", () => {
+                        document.querySelector(".proyect-content").style.left = "0%"
+                        document.querySelector(".swiper").style.right = "0%"
+                        document.querySelector(".technologies-icons").style.bottom = "5%"
+                        document.querySelector(".proyects-preview").classList.remove("video-preview")
+                        document.querySelector(".container-video").style.opacity = "0"
+                        document.querySelector(".container-video").style.pointerEvents = "none"
+                        // cambiamos las propiedad del video para cortar la reproduccion y cambiamos el titulo para que la condicion del video de falso y lo corrija 
+                        document.querySelector(".container-video iframe").src = infoProyects.url
+                        document.querySelector(".container-video iframe").dataset.title = ""
+                        btnVolver.style.left = "-100%"
+                    })
                     break
                 default:
                     break;
@@ -319,36 +351,6 @@ Proyects()
 
 // botones y animacion para los videos 
 
-/* ------------------------ BTNS ----------------------- */
-let btnPlay = document.getElementById("btn-play")
-let btnVolver = document.getElementById("btn-volver")
-
-btnPlay.addEventListener("click", () => {
-    document.querySelector(".proyect-content").style.left = "-150%"
-    document.querySelector(".swiper").style.right = "-150%"
-    document.querySelector(".technologies-icons").style.bottom = "-10%"
-    document.querySelector(".proyects-preview").classList.add("video-preview")
-    document.querySelector(".container-video").style.opacity = "1"
-    document.querySelector(".container-video").style.pointerEvents = "auto"
-    setTimeout(() => {
-        btnVolver.style.left = "0"
-        btnVolver.style.animation = "hoverVolver 5s 1"
-    }, 1500)
-})
-
-
-btnVolver.addEventListener("click", () => {
-    document.querySelector(".proyect-content").style.left = "0%"
-    document.querySelector(".swiper").style.right = "0%"
-    document.querySelector(".technologies-icons").style.bottom = "5%"
-    document.querySelector(".proyects-preview").classList.remove("video-preview")
-    document.querySelector(".container-video").style.opacity = "0"
-    document.querySelector(".container-video").style.pointerEvents = "none"
-    // cambiamos las propiedad del video para cortar la reproduccion y cambiamos el titulo para que la condicion del video de falso y lo corrija 
-    document.querySelector(".container-video iframe").src = `https://www.youtube.com/`
-    document.querySelector(".container-video iframe").dataset.title = ""
-    btnVolver.style.left = "-100%"
-})
 
 
 
