@@ -2,8 +2,30 @@
 let proyectList = [
     {
         type: "website",
+        title: "Travel React",
+        time: "19-Noviembre-2022",
+        content:
+            "Proyecto personal con React, estoy experimentando cómo funciona este Framework y me ha gustado, este es solo uno de los primeros que he hecho pero buscare retos más complicados para subir mi nivel.",
+        url: "https://test-travel-react.netlify.app/",
+        github: "https://github.com/fernando5498/Travel-React",
+        image: "assets/proyectos/react/travel-react.webp",
+        tags: ["html", "css", "sass", "react"]
+    },
+    {
+        type: "website",
+        title: "Travel & Hotells",
+        time: "28-Octubre-2022",
+        content:
+            `Este es uno de los proyectos que realice con el Bootcamp y prueba técnica de <a class='link' href='https://silveraenterprises.com/' target='_blank'>SilverEnterpise</a>, aprendí demasiado con ellos, incluyendo el manejo de Shopify y la creación de secciones dinámicas con liquid, está página es solo la base del sitio original.`,
+        url: "https://travelhotells.netlify.app/",
+        github: "https://github.com/fernando5498/Travek-Hotells",
+        image: "assets/proyectos/js/travelhotells.webp",
+        tags: ["html", "css", "sass", "js"]
+    },
+    {
+        type: "website",
         title: "Wallpapers",
-        time: "7/diciembre/2021",
+        time: "7-diciembre-2021",
         content:
             "Creada con Html,Css y JavaScript, me inspire con diferentes diseños e implemente videos en bucle de alta calidad.",
         url: "assets/proyectos/js/Pagina-Wallpaper/index.html",
@@ -11,12 +33,13 @@ let proyectList = [
         image: "assets/img/home/flor.webp",
         tags: ["html", "css", "js"]
     },
+
     {
         type: "website",
         title: "Evulus Tokens",
-        time: "19/Febrero/2022",
+        time: "19-Febrero-2022",
         content:
-            "Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript",
+            "Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript.",
         url: "assets/proyectos/js/Evulus/index.html",
         github: "https://github.com/fernando5498/evulus-Inicio",
         image: "assets/img/home/evulus-home.webp",
@@ -25,9 +48,9 @@ let proyectList = [
     {
         type: "website",
         title: "Mi Antiguo Portafolio",
-        time: "24/Julio/2022",
+        time: "24-Julio-2022",
         content:
-            "Fue el primer portafolio que realice, tarde muchisimo tiempo pero logre terminarlo, hasta ahora es uno de los proyectos con el que logro ver mi progreso y recuerdo como no debo hacer las cosas 😂 pero me gusto mucho",
+            "Fue el primer portafolio que realice, tarde muchísimo tiempo pero logre terminarlo, hasta ahora es uno de los proyectos con el que logro ver mi progreso pero me gustó mucho.",
         url: "assets/proyectos/js/Portafolio-Principal/index.html",
         github: "https://github.com/fernando5498/Segundo-Portafolio",
         image: "assets/proyectos/js/Portafolio-Principal/primer-portafolio.webp",
@@ -36,9 +59,9 @@ let proyectList = [
     {
         type: "video",
         title: "Two Feet I Feel Like I'm Drowning",
-        time: "3/Enero/2022",
+        time: "3-Enero-2022",
         content:
-            "Siempre me ha gustado la musica y me encantaria seguir creando videos asi por mi cuenta, lo cree con after effects",
+            "Siempre me ha gustado la musica y me encantaria seguir creando videos asi por mi cuenta, lo cree con after effects.",
         url: "https://www.youtube.com/embed/HcxUKjzbFhQ",
         image: "assets/img/home/two_feet-poster.webp",
         tags: ["premiere", "after-effects"]
@@ -46,9 +69,9 @@ let proyectList = [
     {
         type: "video",
         title: "Video para RedesTopk",
-        time: "19/octubre/2021",
+        time: "19-octubre-2021",
         content:
-            "Video Creado con Illustrator, After effects, Premiere y montado por Redestopk en su canal Oficial de Youtube, si gustan visiten su canal con el boton de abajo",
+            "Video Creado con Illustrator, After effects, Premiere y montado por Redestopk en su canal Oficial de Youtube, si gustan visiten su canal con el boton de abajo.",
         url: "https://www.youtube.com/embed/yh-xzSoGBNA",
         image: "assets/img/home/redestopk1.webp",
         tags: ["premiere", "after-effects"]
@@ -56,9 +79,9 @@ let proyectList = [
     {
         type: "video",
         title: "RedesTopk Marketing",
-        time: "1/octubre/2021",
+        time: "1-octubre-2021",
         content:
-            "Tuve la oportunidad de crearles un video a RedesTopk, les invito a visitar su canal es una empresa dedicada al Marketing",
+            "Tuve la oportunidad de crearles un video a RedesTopk, les invito a visitar su canal es una empresa dedicada al Marketing.",
         url: "https://www.youtube.com/embed/W8mErtIAuwE",
         image: "assets/img/home/redestopk.webp",
         tags: ["premiere", "after-effects", "illustrator"]
@@ -92,6 +115,10 @@ function listIcons(array, father) {
             url: "assets/img/icons/php-icon.svg"
         },
         {
+            title: "react",
+            url: "assets/img/icons/react-icon.svg"
+        },
+        {
             title: "illustrator",
             url: "assets/img/icons/illustrator-icon.svg"
         },
@@ -109,7 +136,7 @@ function listIcons(array, father) {
     array.forEach(tag => {
         icons.forEach(icon => {
             if (tag === icon.title) {
-                let img = `<img src="${icon.url}"/>`
+                let img = `<img data-tippy-content="${icon.title}" class="tooltip-ra" src="${icon.url}"/>`
                 container.push(img)
             }
         })
@@ -262,4 +289,9 @@ var swiper = new Swiper(".mySwiper", {
 })
 swiper.on('slideChange', function () {
     bgPreviewContent()
+});
+/* ----------------------- TOLLTIP ---------------------- */
+
+tippy('.tooltip-ra', {
+    content: 'My tooltip!',
 });

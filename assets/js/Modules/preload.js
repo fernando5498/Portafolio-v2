@@ -27,9 +27,6 @@ window.addEventListener('load', () => {
     wow.init();
 
     /* ----------------------- SWIPER ----------------------- */
-    tippy('.tooltip-ra', {
-        content: 'My tooltip!',
-    });
 
     document.getElementById('header').classList.add('animate__animated')
     document.getElementById('header').classList.add('animate__fadeInDown')

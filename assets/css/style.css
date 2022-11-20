@@ -82,6 +82,10 @@ button:focus {
   visibility: hidden;
 }
 
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+
 @media screen and (min-width: 992px) {
   .container {
     max-width: 1243px;
@@ -287,6 +291,16 @@ button:focus {
   background-size: 100% 1px;
 }
 
+.link {
+  transition: all 300ms ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.link:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
 .redes {
   display: flex;
   width: min(60%, 315px);
@@ -369,7 +383,7 @@ button:focus {
 }
 @media screen and (max-width: 576px) {
   .sub-heading__icons img,
-  .sub-heading__icons svg {
+.sub-heading__icons svg {
     height: 48px;
   }
   .sub-heading__icons i {

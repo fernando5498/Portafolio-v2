@@ -15,18 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <!-- --------------------- CSS --------------------- -->
-    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet"
+    <link onload="if(media!='all')media='all'" rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet"
+    <link onload="if(media!='all')media='all'" rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
-    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet"
+    <link onload="if(media!='all')media='all'" rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -63,14 +63,14 @@
     <!-- ------------------ MY SCRIPS ------------------ -->
 
 
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-    <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script async src="assets/js/Modules/preload.js"></script>
-    <script defer type="module" src="assets/js/app.js"></script>
+    <script defer="defer" type="module" src="assets/js/app.js"></script>
 
 </head>
 
@@ -95,15 +95,26 @@
                 <div class="theme-dark" id="theme-dark"><i class="fa-solid fa-lightbulb-slash"></i></div>
                 <div class="close" id="close"><i class="fa-solid fa-xmark"></i></div>
             </div>
-            <div class="user"><img src='assets/img/home/CV.webp' alt='Raul Pineda' loading='lazy'></div><a
-                class="btn-primario my-4" href="assets/proyectos/RaulPineda-Curriculum.pdf" target="_blank"
+
+            <div class="user">
+                <img src='assets/img/home/CV.webp' alt='Raul Pineda' loading='lazy'>
+            </div>
+            <a class="btn-primario my-4" href="assets/proyectos/RaulPineda-Curriculum.pdf" target="_blank"
                 rel="noopener noreferrer">Curriculum</a>
-            <div class="redes my-4"><a target="_blank" href="https://www.facebook.com/profile.php?id=100010575304377"
-                    rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a><a target="_blank"
+            <div class="redes my-4">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100010575304377"
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank"
                     href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
-                    target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a><a
-                    target="_blank" href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-github"></i></a></div>
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a target="_blank" href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
             <nav class="nav-r">
                 <ul class="navbar-r">
                     <li class="navbar-r__link "><a data-page="home" class="active" href="#home">Inicio</a></li>
@@ -175,24 +186,24 @@
                                 class="visibility-animate wow animate__animated animate__fadeInLeft">Habilidades</h2>
                             <p data-wow-duration="1.2s"
                                 class="visibility-animate wow animate__animated animate__fadeInUp">Tengo buen manejo y
-                                uso de las siguientes tecnologias para la creacion de mis paginas webs y prototipos.</p>
+                                uso de las siguientes tecnologías para la creación de mis páginas webs y prototipos.</p>
                         </div>
                         <div data-wow-duration="1.2s"
                             class="col-12 col-lg-6 sub-heading__icons visibility-animate wow animate__animated animate__fadeInUp">
-                            <i data-tippy-content="Html" class="tooltip-ra fa-brands fa-html5"></i><i
-                                data-tippy-content="Css" class="tooltip-ra fa-brands fa-css3-alt"></i><i
-                                data-tippy-content="Sass" class="tooltip-ra fa-brands fa-sass"></i><i
-                                data-tippy-content="Figma" class="tooltip-ra fa-brands fa-figma"></i><i
-                                data-tippy-content="Bootstrap" class="tooltip-ra fa-brands fa-bootstrap"></i><i
-                                data-tippy-content="JavaScript" class="tooltip-ra fa-brands fa-square-js"></i><i
-                                data-tippy-content="WordPress" class="tooltip-ra fa-brands fa-wordpress"></i>
+                            <i data-tippy-content="Html" class="tooltip-ra fa-brands fa-html5"></i>
+                            <i data-tippy-content="Css" class="tooltip-ra fa-brands fa-css3-alt"></i>
+                            <i data-tippy-content="Sass" class="tooltip-ra fa-brands fa-sass"></i>
+                            <i data-tippy-content="Figma" class="tooltip-ra fa-brands fa-figma"></i>
+                            <i data-tippy-content="Bootstrap" class="tooltip-ra fa-brands fa-bootstrap"></i>
+                            <i data-tippy-content="JavaScript" class="tooltip-ra fa-brands fa-square-js"></i>
+                            <i data-tippy-content="WordPress" class="tooltip-ra fa-brands fa-wordpress"></i>
+                            <img class="filter-white tooltip-ra" data-tippy-content="Shopify Liquid"
+                                src='assets/img/icons/liquid-icon.png' alt='Shopify Liquid' loading='lazy' />
+
                         </div>
                     </div>
                 </div>
             </section>
-
-
-            <!-- services  -->
             <!---------- services ---------->
             <section id='services'>
                 <div class='services mb-section'>
@@ -242,8 +253,6 @@
                     </div>
                 </div>
             </section>
-
-            <!---------- myEmail End ---------->
             <!-- courses  -->
             <section id="courses" class=" overflow-hidden courses mb-section">
                 <div class="container">
@@ -253,11 +262,9 @@
                                 <h2 data-wow-duration="1.2s"
                                     class="visibility-animate wow animate__animated animate__fadeInRight">Cursos</h2>
                                 <p data-wow-duration="1.2s"
-                                    class="visibility-animate wow animate__animated animate__fadeInUp">En es está
-                                    seccion
-                                    podran ver los cursos que he tomado para mejorar mis habilidades como desarrollador
-                                    y
-                                    algunos pequeños curso de mi interes. </p>
+                                    class="visibility-animate wow animate__animated animate__fadeInUp">En está sección
+                                    podrán ver los cursos que he tomado para mejorar mis habilidades como desarrollador
+                                    y algunos pequeños curso de mi interés.</p>
                                 <button data-wow-duration="2s" id="btn-next"
                                     class="ms-md-0 mt-3 btn-primario visibility-animate wow animate__animated animate__fadeInUp">Ver
                                     resumen
@@ -266,10 +273,13 @@
                             <div data-wow-duration="1.2s"
                                 class="col-12 col-lg-6 sub-heading__icons visibility-animate wow animate__animated animate__fadeInUp">
                                 <img data-tippy-content="Instituto Simón Bolivar" class="tooltip-ra"
-                                    src='assets/img/icons/icpsb-icon.png' alt='Simon Bolivar' loading='lazy'><img
-                                    data-tippy-content="7even" class="tooltip-ra" src='assets/img/icons/7even-icon.png'
-                                    alt='7even' loading='lazy'><img data-tippy-content="Udemy" class="tooltip-ra"
-                                    src='assets/img/icons/udemy-icon.svg' alt='Udemy' loading='lazy'>
+                                    src='assets/img/icons/icpsb-icon.png' alt='Simon Bolivar' loading='lazy'>
+                                <img data-tippy-content="7even" class="tooltip-ra" src='assets/img/icons/7even-icon.png'
+                                    alt='7even' loading='lazy'>
+                                <img data-tippy-content="Udemy" class="tooltip-ra" src='assets/img/icons/udemy-icon.svg'
+                                    alt='Udemy' loading='lazy'>
+                                <img data-tippy-content="Ebac" class="tooltip-ra" src='assets/img/icons/ebac-icon.svg'
+                                    alt='Udemy' loading='lazy'>
                             </div>
                         </div>
 
@@ -279,52 +289,52 @@
                                     target="_blank" rel="noopener noreferrer" class="card-curso"><img
                                         class="card-curso__img" src='assets/img/icons/icpsb-icon.png'
                                         alt='Simon Bolivar' loading='lazy'>
-                                    <h5 class="card-curso__title">Electronica Básica</h3>
-                                        <p class="card-curso__time"><time datetime="1/12/2018">Diciembre 2018</time></p>
+                                    <h5 class="card-curso__title">Electronica Básica</h5>
+                                    <p class="card-curso__time"><time datetime="1-12-2018">Diciembre 2018</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Certificado_Reparacion_Pc.pdf" target="_blank"
                                     rel="noopener noreferrer" class="card-curso"><img class="card-curso__img"
                                         src='assets/img/icons/icpsb-icon.png' alt='Simon Bolivar' loading='lazy'>
                                     <h5 class="card-curso__title">Reparación de Computadoras</h5>
-                                    <p class="card-curso__time"><time datetime="1/03/2019">Marzo 2019</time></p>
+                                    <p class="card-curso__time"><time datetime="1-03-2019">Marzo 2019</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Certificado-Udemy-Master-en-Css.pdf"
                                     target="_blank" rel="noopener noreferrer" class="card-curso"><img
                                         class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
                                         loading='lazy'>
                                     <h5 class="card-curso__title">Css Responsive y Bootstrap</h5>
-                                    <p class="card-curso__time"><time datetime="1/8/2021">Agosto 2021</time></p>
+                                    <p class="card-curso__time"><time datetime="1-8-2021">Agosto 2021</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Certificado-Udemy-HTML.pdf" target="_blank"
                                     rel="noopener noreferrer" class="card-curso"><img class="card-curso__img"
                                         src='assets/img/icons/udemy-icon.svg' alt='Udemy' loading='lazy'>
                                     <h5 class="card-curso__title">HTML de Cero a Experto</h5>
-                                    <p class="card-curso__time"><time datetime="1/12/2021">Diciembre 2021</time></p>
+                                    <p class="card-curso__time"><time datetime="1-12-2021">Diciembre 2021</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Universidad-de-Css-desde-cero-a-experto.pdf"
                                     target="_blank" rel="noopener noreferrer" class="card-curso"><img
                                         class="card-curso__img" src='assets/img/icons/udemy-icon.svg' alt='Udemy'
                                         loading='lazy'>
                                     <h5 class="card-curso__title">Css de Cero a Experto</h5>
-                                    <p class="card-curso__time"><time datetime="1/12/2021">Diciembre 2021</time></p>
+                                    <p class="card-curso__time"><time datetime="1-12-2021">Diciembre 2021</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Certificado_sass.pdf" target="_blank"
                                     rel="noopener noreferrer" class="card-curso"><img class="card-curso__img"
                                         src='assets/img/icons/udemy-icon.svg' alt='Udemy' loading='lazy'>
                                     <h5 class="card-curso__title">Sass y JQuery</h5>
-                                    <p class="card-curso__time"><time datetime="1/1/2022">Enero 2022</time></p>
+                                    <p class="card-curso__time"><time datetime="1-1-2022">Enero 2022</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Certificado_Raul-7even.pdf" target="_blank"
                                     rel="noopener noreferrer" class="card-curso"><img class="card-curso__img"
                                         src='assets/img/icons/7even-icon.png' alt='7even' loading='lazy'>
                                     <h5 class="card-curso__title">Desarrollo Web con 7even</h5>
-                                    <p class="card-curso__time"><time datetime="1/6/2022">Junio 2022</time></p>
+                                    <p class="card-curso__time"><time datetime="1-6-2022">Junio 2022</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/curso-wordpress.pdf" target="_blank"
                                     rel="noopener noreferrer" class="card-curso"><img class="card-curso__img"
                                         src='assets/img/icons/udemy-icon.svg' alt='Udemy' loading='lazy'>
                                     <h5 class="card-curso__title">Manejo de WordPress</h5>
-                                    <p class="card-curso__time"><time datetime="1/6/2022">Junio 2022</time></p>
+                                    <p class="card-curso__time"><time datetime="1-6-2022">Junio 2022</time></p>
                                 </a>
                                 <a href="assets/proyectos/certificados/Curso-Ebac-Latam-Diseño-UI.pdf" target="_blank"
                                     rel="noopener noreferrer" class="card-curso">
@@ -332,7 +342,7 @@
                                         loading='lazy'>
                                     <h5 class="card-curso__title">Workshop online De Figma</h5>
 
-                                    <p class="card-curso__time"><time datetime="14/10/22">Octubre 2022</time></p>
+                                    <p class="card-curso__time"><time datetime="14-10-22">Octubre 2022</time></p>
                                 </a>
                                 <button id="btn-prev" class="btn-primario"><i
                                         class="fa-solid fa-arrow-left"></i>Volver</button>
@@ -350,7 +360,7 @@
                         <div class="item-experience mt-5 visibility-animate wow animate__animated animate__fadeInUp">
                             <div class="item-experience__header">
                                 <div class="item-experience__header__time">
-                                    <h4>2022 <img width="18px" class="ms-2" src='assets/img/favicon.gif' alt='icon'
+                                    <h4>2022 <img width="20" class="ms-2" src='assets/img/favicon.gif' alt='icon'
                                             loading='lazy' /></h4>
                                     <p><time datetime="">Actual</time>
                                     </p>
@@ -368,11 +378,12 @@
                                     de la rutina.</p>
                             </div>
                         </div>
+
                         <div class="item-experience mt-5 visibility-animate wow animate__animated animate__fadeInUp">
                             <div class="item-experience__header">
                                 <div class="item-experience__header__time">
                                     <h4>2022</h4>
-                                    <p><time datetime="1/6/2022">Junio</time>- <time datetime="1/7/2022">Julio</time>
+                                    <p><time datetime="1-6-2022">Junio</time>- <time datetime="1-7-2022">Julio</time>
                                     </p>
                                 </div>
                                 <h4 class="item-experience__header__title">Aprendiendo con NKI (Trabajo en equipo)</h4>
@@ -386,11 +397,12 @@
                                     el control de versiones </p>
                             </div>
                         </div>
+
                         <div class="item-experience mt-5 visibility-animate wow animate__animated animate__fadeInUp">
                             <div class="item-experience__header">
                                 <div class="item-experience__header__time">
                                     <h4>2022 - 2021</h4>
-                                    <p><time datetime="22/5/2021">Mayo</time>- <time datetime="4/8/2022">Agosto</time>
+                                    <p><time datetime="22-5-2021">Mayo</time>- <time datetime="4-8-2022">Agosto</time>
                                     </p>
                                 </div>
                                 <h4 class="item-experience__header__title">Apoyo Voluntario Como Secretario</h4><i
@@ -468,7 +480,7 @@
                                 Otros</h2>
                             <p data-wow-duration="1.2s"
                                 class="visibility-animate wow animate__animated animate__fadeInUp">Estas
-                                son los programas que uso en mi entorno de trabajo, progreso personal y uso situacional,
+                                son los programas que uso en mi entorno de trabajo, progreso personal o uso situacional,
                                 pero no
                                 necesariamente tengo un alto nivel en estas herramientas. </p>
                         </div>
@@ -492,60 +504,59 @@
                     </div>
                 </div>
             </section>
+
+
+        </main>
+
+        <!-- footer  -->
+        <footer data-wow-duration="1.2s"
+            class="footer overflow-hidden mt-5 pt-5 visibility-animate wow animate__animated animate__fadeInUp">
+            <div class="container gap-4 d-flex flex-wrap align-content-center justify-content-between">
+                <div id="contact" class="footer-col col-5 col-sm-6 col-lg-3">
+                    <h2>Raul Pineda</h2>
+                    <ul class="footer-col__conten">
+                        <li><a href="https://goo.gl/maps/TquTHiPc3r6cdUr89" target="_blank"
+                                rel="noopener noreferrer">San
+                                Roque - Imbabura</a></li>
+                        <li><span>Contactate:</span><a
+                                href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
+                                target="_blank" rel="noopener noreferrer">+593 97 979 4244</a></li>
+                        <li>
+                            <div class="redes mx-0 redes--1"><a target="_blank"
+                                    href="https://www.facebook.com/profile.php?id=100010575304377"
+                                    rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a><a
+                                    href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer"><i
+                                        class="fa-brands fa-github"></i></a><a
+                                    href="https://www.linkedin.com/in/raul-pineda" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col col-5 col-sm-5 col-lg-2">
+                    <h3>Navegación</h3>
+                    <ul class="footer-col__conten">
+                        <li><a href="#home" rel="noopener noreferrer">Inicio </a></li>
+                        <li><a href="#about" rel="noopener noreferrer">Sobre Mí </a></li>
+                        <li><a href="#skills" rel="noopener noreferrer">Habilidades </a></li>
+                        <li><a href="#experience" rel="noopener noreferrer">Experience </a></li>
+                        <li><a href="#proyect" rel="noopener noreferrer">Proyecto </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col col-5 col-sm-6 col-lg-3"><img width="100" src="assets/img/home/footer-img.webp"
+                        alt="home"></div>
+                <div class="footer-col col-5 col-sm-5 col-lg-2">
+                    <h3>Creado con</h3>
+                    <ul class="footer-col__conten">
+                        <li>Html </li>
+                        <li>Css/Sass </li>
+                        <li>Bootstrap </li>
+                        <li>JavaScript </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-copyright">Diseñado por Raul Pineda Copyright © 2022. Todos los Derechos Reservado </p>
+        </footer>
     </div>
-
-
-    </main>
-
-    <!-- footer  -->
-    <footer data-wow-duration="1.2s"
-        class="footer overflow-hidden mt-5 pt-5 visibility-animate wow animate__animated animate__fadeInUp">
-        <div class="container gap-4 d-flex flex-wrap align-content-center justify-content-between">
-            <div id="contact" class="footer-col col-5 col-sm-6 col-lg-3">
-                <h2>Raul Pineda</h2>
-                <ul class="footer-col__conten">
-                    <li><a href="https://goo.gl/maps/TquTHiPc3r6cdUr89" target="_blank" rel="noopener noreferrer">San
-                            Roque - Imbabura</a></li>
-                    <li><span>Contactate:</span><a
-                            href="https://wa.me/593979794244?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
-                            target="_blank" rel="noopener noreferrer">+593 97 979 4244</a></li>
-                    <li>
-                        <div class="redes mx-0 redes--1"><a target="_blank"
-                                href="https://www.facebook.com/profile.php?id=100010575304377"
-                                rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a><a
-                                href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer"><i
-                                    class="fa-brands fa-github"></i></a><a
-                                href="https://www.linkedin.com/in/raul-pineda" target="_blank"
-                                rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a></div>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col col-5 col-sm-5 col-lg-2">
-                <h3>Navegación</h3>
-                <ul class="footer-col__conten">
-                    <li><a href="#home" rel="noopener noreferrer">Inicio </a></li>
-                    <li><a href="#about" rel="noopener noreferrer">Sobre Mí </a></li>
-                    <li><a href="#skills" rel="noopener noreferrer">Habilidades </a></li>
-                    <li><a href="#experience" rel="noopener noreferrer">Experience </a></li>
-                    <li><a href="#proyect" rel="noopener noreferrer">Proyecto </a></li>
-                </ul>
-            </div>
-            <div class="footer-col col-5 col-sm-6 col-lg-3"><img width="100%" src="assets/img/home/footer-img.webp"
-                    alt="home"></div>
-            <div class="footer-col col-5 col-sm-5 col-lg-2">
-                <h3>Creado con</h3>
-                <ul class="footer-col__conten">
-                    <li>Html </li>
-                    <li>Css/Sass </li>
-                    <li>Bootstrap </li>
-                    <li>JavaScript </li>
-                </ul>
-            </div>
-        </div>
-        <p class="footer-copyright">Diseñado por Raul Pineda Copyright © 2022. Todos los Derechos Reservado </p>
-    </footer>
-    </div>
-
 </body>
 
 </html>

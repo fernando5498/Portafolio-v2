@@ -39,3 +39,13 @@
         background-size: 100% 1px;
     }
 }
+
+.link {
+    transition: map-get(var.$transition, fast);
+    color: transparentize(var.$color-primario, 0.4);
+    border-bottom: 1px solid transparentize(var.$color-primario, 0.4);
+    &:hover {
+        color: var.$color-primario;
+        border-bottom: 1px solid var.$color-primario;
+    }
+}
