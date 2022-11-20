@@ -485,8 +485,9 @@ li::selection {
   -webkit-transition: all 600ms ease-in-out;
   -o-transition: all 600ms ease-in-out;
   transition: all 600ms ease-in-out;
-  height: clamp(600px, 100vh - 75px, 900px);
+  height: clamp(650px, 100vh - 80px, 900px);
   filter: contrast(120%);
+  padding: 2rem 0;
   -webkit-filter: contrast(120%);
   -moz-filter: contrast(120%);
   z-index: 0;
@@ -529,6 +530,7 @@ li::selection {
 }
 @media screen and (max-width: 992px) {
   .proyects-preview-container {
+    padding: 0 2rem;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
@@ -583,10 +585,18 @@ li::selection {
 }
 
 /* ----------------------- SWIPPES ---------------------- */
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+  border: 5px solid white;
+}
+
 .swiper {
   position: relative;
   right: 0;
-  height: 90%;
   margin: 0;
   margin-left: auto;
   padding-top: 40px;
@@ -596,12 +606,6 @@ li::selection {
   -webkit-transition: all 600ms ease-in-out;
   -o-transition: all 600ms ease-in-out;
   transition: all 600ms ease-in-out;
-}
-@media screen and (max-width: 992px) {
-  .swiper {
-    padding-top: 0;
-    height: auto;
-  }
 }
 
 .swiper-wrapper {

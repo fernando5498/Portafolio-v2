@@ -1,3 +1,119 @@
+let header = document.getElementById('header')
+let burger = document.getElementById('menu-burger')
+let menu = document.getElementById('wrapper-menu-movile')
+let bgMenu = document.getElementById('bg-fill-menu')
+let navbar_links = document.querySelectorAll('.navbar-r .navbar-r__link')
+let lastScrollTop = 0
+let closeMenu = document.getElementById('close')
+
+/* ----------------- SECTION ACTIVE ----------------- */
+const sections = document.querySelectorAll("section")
+const navLink = document.querySelectorAll(".navbar-r__link a")
+
+window.addEventListener("scroll", function () {
+    let idSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop) {
+            idSection = section.getAttribute('id')
+        }
+    })
+    // console.log(idSection);
+    navLink.forEach(li => {
+        li.classList.remove('active')
+        if (li.dataset.page == idSection) {
+            li.classList.add('active')
+        }
+    })
+})
+
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 100) {
+        header.classList.add('active')
+    } else {
+        header.classList.remove('active')
+    }
+})
+
+navbar_links.forEach(element => {
+    element.addEventListener('click', () => {
+        menu.classList.remove('active')
+        bgMenu.style.display = 'none'
+    })
+})
+
+bgMenu.addEventListener('click', () => {
+    menu.classList.remove('active')
+    bgMenu.style.display = 'none'
+})
+
+burger.addEventListener('click', () => {
+    menu.classList.add('active')
+    bgMenu.style.display = 'block'
+})
+
+closeMenu.addEventListener('click', () => {
+    menu.classList.remove('active')
+    bgMenu.style.display = 'none'
+
+})
+let itemExperience = document.querySelectorAll('.item-experience')
+let experienceContent = document.querySelectorAll('.item-experience__content')
+let sliderSubHeading = document.getElementById('slider-sub-heading')
+let btnNext = document.getElementById('btn-next')
+let btnPrev = document.getElementById('btn-prev')
+
+
+/* --------------------- EXPERIENCE --------------------- */
+itemExperience.forEach(item => {
+    item.addEventListener('click', () => {
+        item.lastElementChild.classList.toggle('active');
+        item.firstElementChild.classList.toggle('active')
+
+        itemExperience.forEach(item2 => {
+            if (item2 !== item) {
+                item2.lastElementChild.classList.remove('active');
+                item2.firstElementChild.classList.remove('active')
+            } else {
+                console.log('hola');
+            }
+        })
+    })
+})
+
+/* ----------------- SLIDERS SUB HEADING ---------------- */
+
+sliderSubHeading.lastElementChild.style.left = "100%"
+sliderSubHeading.style.transition = "all 600ms"
+sliderSubHeading.lastElementChild.style.display = "none"
+window.addEventListener('load', () => {
+    let hFirsItemCurse = sliderSubHeading.children[0].getBoundingClientRect().height
+    sliderSubHeading.style.height = hFirsItemCurse + "px"
+})
+
+btnNext.addEventListener('click', () => {
+    sliderSubHeading.lastElementChild.style.display = "block"
+    sliderSubHeading.style.transform = "translateX(-100%)"
+    sliderSubHeading.firstElementChild.style.left = "-100%"
+    sliderSubHeading.lastElementChild.style.left = "0%"
+    let height2Div = sliderSubHeading.lastElementChild.getBoundingClientRect().height;
+    sliderSubHeading.style.height = height2Div + "px"
+
+})
+btnPrev.addEventListener('click', () => {
+    sliderSubHeading.style.transform = "translateX(0%)"
+    sliderSubHeading.firstElementChild.style.left = "0%"
+    sliderSubHeading.lastElementChild.style.left = "100%"
+    let height1Div = sliderSubHeading.firstElementChild.getBoundingClientRect().height;
+    sliderSubHeading.style.height = height1Div + "px"
+    setTimeout(() => {
+        sliderSubHeading.lastElementChild.style.display = "none"
+    }, 600);
+})
+
 /* ----------------- DATOS DE PROYECTOS ----------------- */
 let proyectList = [
     {
@@ -236,31 +352,20 @@ btnVolver.addEventListener("click", () => {
 
 
 
-import "./Modules/menu.js"
-import "./Modules/home.js"
-
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    direction: "vertical",
     keyboard: true,
     loop: true,
     speed: 300,
     slideToClickedSlide: true,
     spaceBetween: 230,
-    breakpoints: {
-        200: {
-            direction: "horizontal",
-        },
-        992: {
-            autoplay: {
-                delay: 100,
-            },
-        },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
     },
-
     coverflowEffect: {
         rotate: 0,
         stretch: 100,
@@ -272,9 +377,5 @@ var swiper = new Swiper(".mySwiper", {
 swiper.on('beforeTransitionStart', function () {
     bgPreviewContent()
 });
-/* ----------------------- TOLLTIP ---------------------- */
 
-tippy('.tooltip-ra', {
-    content: 'My tooltip!',
-});
 

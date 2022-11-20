@@ -26,6 +26,11 @@ window.addEventListener('load', () => {
     })
     wow.init();
 
+    /* ----------------------- TOLLTIP ---------------------- */
+
+    tippy('.tooltip-ra', {
+        content: 'My tooltip!',
+    });
     /* ----------------------- SWIPER ----------------------- */
 
     document.getElementById('header').classList.add('animate__animated')

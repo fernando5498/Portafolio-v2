@@ -18,8 +18,9 @@
     -webkit-transition: map-get(var.$transition, medium);
     -o-transition: map-get(var.$transition, medium);
     transition: map-get(var.$transition, medium);
-    height: clamp(600px, 100vh - 75px, 900px);
+    height: clamp(650px, 100vh - 80px, 900px);
     filter: contrast(120%);
+    padding: 2rem 0;
     -webkit-filter: contrast(120%);
     -moz-filter: contrast(120%);
     z-index: 0;
@@ -61,6 +62,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     @include breakP.media-queries-down(lg) {
+        padding: 0 2rem;
         -webkit-box-align: baseline;
         -ms-flex-align: baseline;
         align-items: baseline;
@@ -114,10 +116,18 @@
 }
 
 /* ----------------------- SWIPPES ---------------------- */
+.swiper-pagination-bullet {
+    background-color: var.$color-primario;
+    opacity: 0.5;
+    &.swiper-pagination-bullet-active {
+        opacity: 1;
+        border: 5px solid white;
+    }
+}
+
 .swiper {
     position: relative;
     right: 0;
-    height: 90%;
     margin: 0;
     margin-left: auto;
     padding-top: 40px;
@@ -127,11 +137,6 @@
     -webkit-transition: map-get(var.$transition, medium);
     -o-transition: map-get(var.$transition, medium);
     transition: map-get(var.$transition, medium);
-    @include breakP.media-queries-down(lg) {
-        padding-top: 0;
-
-        height: auto;
-    }
 }
 .swiper-wrapper {
     -webkit-box-align: center;
