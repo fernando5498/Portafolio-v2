@@ -2,7 +2,7 @@
 
 
 ## 🛠 Acerca del Proyecto
-Este es mi nuevo portafolio, lo cree porque ya era necesario hacer un cambio, además porque reciénteme me mude a Ecuador y tuve que actualizar muchas cosas, así que aproveche y realice el diseño en figma y lo pase a código puro
+Este es mi nuevo portafolio, lo cree porque ya era necesario hacer un cambio, además porque reciéntemente me mude a Ecuador y tuve que actualizar muchas cosas, así que aproveche y realice el diseño en figma y lo pase a código puro
 
 
 ## 😎 Autor
@@ -25,7 +25,6 @@ Este es mi nuevo portafolio, lo cree porque ya era necesario hacer un cambio, ad
 - [x]  Integrar JavaScript para dar mas dinamismo en la página
 - [x]  Contectarlo Con Google Analytics y Hotjar
 - [ ]  Actualizarlo junto a algun framework de JavaScript
-- [ ]  Optener mi propio Dominio
 
 
 
