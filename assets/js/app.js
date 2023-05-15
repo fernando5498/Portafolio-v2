@@ -127,6 +127,7 @@ let proyectList = [
         image: "assets/proyectos/react/travel-react.webp",
         tags: ["html", "css", "sass", "react"]
     },
+
     {
         type: "website",
         title: "Travel & Hotells",
@@ -137,6 +138,17 @@ let proyectList = [
         github: "https://github.com/fernando5498/Travek-Hotells",
         image: "assets/proyectos/js/travelhotells.webp",
         tags: ["html", "css", "sass", "js"]
+    },
+    {
+        type: "website",
+        title: "The Cobblestone Cottage",
+        time: "9-Febrero-2023",
+        content:
+            "Este Proyecto fue creado en WordPress mientras trabajaba para <a class='link' href='https://striveenterprise.com/' target='_blank'>Stripe Enterprises</a>, mis responsabilidades fueron crear la interactividad y estilo visual de la pagina.",
+        url: "https://thecobblestonecottage.com/",
+        github: "",
+        image: "assets/proyectos/wordpress/thecobblestonecottage.webp",
+        tags: ["html", "css", "js", "wordpress", "bootstrap"]
     },
     {
         type: "website",
@@ -152,14 +164,14 @@ let proyectList = [
 
     {
         type: "website",
-        title: "Evulus Tokens",
-        time: "19-Febrero-2022",
+        title: "Claudetts Hair Studio",
+        time: "12-Febrero-2023",
         content:
-            "Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript.",
-        url: "assets/proyectos/js/Evulus/index.html",
-        github: "https://github.com/fernando5498/evulus-Inicio",
-        image: "assets/img/home/evulus-home.webp",
-        tags: ["html", "css", "sass", "bootstrap"]
+            "Este Proyecto fue creado en WordPress mientras trabajaba para <a class='link' href='https://striveenterprise.com/' target='_blank'>Stripe Enterprises</a>, mis responsabilidades fueron crear la interactividad y estilo visual de la pagina",
+        url: "https://claudettshairstudio.com/",
+        github: "",
+        image: "assets/proyectos/shopify/claudettshairstudio.webp",
+        tags: ["html", "css", "js", "shopify", "bootstrap"]
     },
     {
         type: "website",
@@ -171,6 +183,17 @@ let proyectList = [
         github: "https://github.com/fernando5498/Segundo-Portafolio",
         image: "assets/proyectos/js/Portafolio-Principal/primer-portafolio.webp",
         tags: ["html", "css", "sass", "bootstrap"]
+    },
+    {
+        type: "website",
+        title: "Ariana Health Beauty",
+        time: "12-Febrero-2023",
+        content:
+            "Este Proyecto fue creado en WordPress mientras trabajaba para <a class='link' href='https://striveenterprise.com/' target='_blank'>Stripe Enterprises</a>, mis responsabilidades fueron crear la interactividad y estilo visual de la pagina",
+        url: "https://arianahealthbeauty.com/",
+        github: "",
+        image: "assets/proyectos/shopify/arianahealthbeauty.webp",
+        tags: ["html", "css", "js", "shopify", "bootstrap"]
     },
     {
         type: "video",
@@ -246,6 +269,14 @@ function listIcons(array, father) {
             title: "after-effects",
             url: "assets/img/icons/afterEffects-icon.svg"
         },
+        {
+            title: "wordpress",
+            url: "assets/img/icons/wordpress-icon.svg"
+        },
+        {
+            title: "shopify",
+            url: "assets/img/icons/shopify-icon.png"
+        },
 
     ]
     let container = []
@@ -289,9 +320,13 @@ function bgPreviewContent() {
             switch (infoProyects.type) {
                 case "website":
                     document.getElementById('btn-site').href = infoProyects.url
-                    document.getElementById('btn-github').href = infoProyects.github
+                    if (infoProyects.github) {
+                        document.getElementById('btn-github').href = infoProyects.github
+                        document.getElementById('btn-github').style.display = "flex"
+                    } else {
+                        document.getElementById('btn-github').style.display = "none"
+                    }
                     document.getElementById('btn-site').style.display = "flex"
-                    document.getElementById('btn-github').style.display = "flex"
                     document.getElementById("btn-play").classList.add("d-none")
                     break;
                 case "video":
